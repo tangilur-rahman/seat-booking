@@ -110,7 +110,11 @@ const BookingPopUp = ({
 
 	return (
 		<>
-			<div className="row m-0 booking-popup-container" data-aos="fade-down">
+			<div
+				className="row m-0 booking-popup-container"
+				data-aos="fade-down"
+				data-aos-duration="700"
+			>
 				<div
 					className="col-xl-6 col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
 					ref={myRef}

@@ -1,25 +1,38 @@
 // external components
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 // internal components
+import View1 from "../View1/View1";
 import "./Home.css";
 
 const Home = () => {
-	// for redirect view
-	const Navigate = useNavigate();
+	// for getting option
+	const [getOption, setOption] = useState("seats");
+
+	// getting section for displaying seats
+	const [getSection, setSection] = useState("");
 
 	return (
 		<>
 			<div className="container-fluid p-0">
 				<div className="row m-0 home-container">
 					<div className="col-2 p-0 left-side">
-						<div className="option">
+						<div
+							className={getOption === "user" ? "option active" : "option"}
+							onClick={() => setOption("user")}
+						>
 							<i className="fa-solid fa-user"></i> <h6>User</h6>
 						</div>
-						<div className="option active">
+						<div
+							className={getOption === "seats" ? "option active" : "option"}
+							onClick={() => setOption("seats")}
+						>
 							<i className="fa-solid fa-user"></i> <h6>Seats</h6>
 						</div>
-						<div className="option">
+						<div
+							className={getOption === "logout" ? "option active" : "option"}
+							onClick={() => setOption("logout")}
+						>
 							<i className="fa-solid fa-right-from-bracket"></i>
 							<h6>Log Out</h6>
 						</div>
@@ -39,7 +52,7 @@ const Home = () => {
 									<h5>Ridhima Girls Lab 1</h5>
 									<h6
 										className="hover-link"
-										onClick={() => Navigate("ridhima-girls-lab-1")}
+										onClick={() => setSection("ridhima-girls-lab-1")}
 									>
 										View Seats
 									</h6>
@@ -70,6 +83,9 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+					{getSection === "ridhima-girls-lab-1" && (
+						<View1 setSection={setSection} />
+					)}
 				</div>
 			</div>
 		</>

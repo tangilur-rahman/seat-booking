@@ -1,16 +1,18 @@
 .view-1-main-container {
-	position: relative;
-}
-
-.view-1-container {
-	width: 100vw;
-	height: 100vh;
+	position: absolute;
+	top: 5vh;
 	display: flex;
 	justify-content: center;
 }
 
-.view-1-container .view-1-wrapper {
-	margin: 30px 0;
+.view-1-container {
+	width: 80vw;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	position: relative;
+	border-top-right-radius: 30px;
 }
 
 .view-1-container .view-1-wrapper span {
@@ -223,3 +225,36 @@
 	justify-content: space-evenly;
 }
 /* layout-7 end  */
+
+.view-1-container .close-btn-view-1 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	background-color: #d7e2ea;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.view-1-container .close-btn-view-1:hover {
+	transform: scale(0.9);
+}
+
+.view-1-container .close-btn-view-1:active {
+	transform: scale(1.1);
+}
+
+.view-1-container .close-btn-view-1 i {
+	font-size: 20px;
+	transition: all 0.3s;
+}
+
+.view-1-container .close-btn-view-1 i:hover {
+	transform: rotate(180deg);
+}
