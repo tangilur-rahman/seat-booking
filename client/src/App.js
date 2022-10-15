@@ -7,8 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 // internal components
 import "./App.css";
 import Home from "./pages/Home/Home";
-import View1 from "./pages/View1/View1";
-import View2 from "./pages/View2/View2";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
 	return (
@@ -16,8 +15,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="ridhima-girls-lab-1" element={<View1 />} />
-					<Route path="view-2" element={<View2 />} />
+					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</BrowserRouter>
 			<ToastContainer />
