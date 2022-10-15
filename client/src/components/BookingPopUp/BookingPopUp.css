@@ -31,6 +31,39 @@
 	cursor: pointer;
 }
 
+.booking-popup-container .booking-popup-wrapper .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	background-color: #d7e2ea;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn:hover {
+	transform: scale(0.9);
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn:active {
+	transform: scale(1.1);
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn i {
+	font-size: 20px;
+	transition: all 0.3s;
+}
+
+.booking-popup-container .booking-popup-wrapper .close-btn i:hover {
+	transform: rotate(180deg);
+}
+
 .booking-popup-wrapper .input-fields-container {
 	display: flex;
 	flex-direction: column;
