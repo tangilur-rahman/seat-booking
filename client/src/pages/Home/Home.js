@@ -1,16 +1,16 @@
 // external components
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // internal components
-import View1 from "../View1/View1";
 import "./Home.css";
 
 const Home = () => {
+	// for redirect router
+	const Navigate = useNavigate();
+
 	// for getting option
 	const [getOption, setOption] = useState("seats");
-
-	// getting section for displaying seats
-	const [getSection, setSection] = useState("");
 
 	return (
 		<>
@@ -52,14 +52,19 @@ const Home = () => {
 									<h5>Ridhima Girls Lab 1</h5>
 									<h6
 										className="hover-link"
-										onClick={() => setSection("ridhima-girls-lab-1")}
+										onClick={() => Navigate("ridhima-girls-lab-1")}
 									>
 										View Seats
 									</h6>
 								</div>
 								<div className="section">
 									<h5>Ridhima Girls Lab 2</h5>
-									<h6 className="hover-link">View Seats</h6>
+									<h6
+										className="hover-link"
+										onClick={() => Navigate("ridhima-girls-lab-2")}
+									>
+										View Seats
+									</h6>
 								</div>
 								<div className="section">
 									<h5>Ridhima Basement Lab</h5>
@@ -83,9 +88,6 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-					{getSection === "ridhima-girls-lab-1" && (
-						<View1 setSection={setSection} />
-					)}
 				</div>
 			</div>
 		</>

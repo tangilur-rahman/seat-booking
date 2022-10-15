@@ -6,7 +6,7 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 // internal components
 import "./View1.css";
 
-const View1 = ({ setSection }) => {
+const View1 = () => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -50,13 +50,9 @@ const View1 = ({ setSection }) => {
 	return (
 		<>
 			{getDocs.length > 0 && (
-				<div
-					className="container-fluid p-0 view-1-main-container"
-					data-aos="fade-down"
-					data-aos-duration="700"
-				>
+				<div className="container-fluid p-0 view-1-main-container">
 					<div className="row m-0 view-1-container">
-						<div className="col-12 p-0 view-1-wrapper">
+						<div className="col-xl-10 col-lg-11 col-11 p-0 view-1-wrapper">
 							<div className="horizontal-container">
 								<div className="horizontal">
 									<div id="layout-1">
@@ -511,14 +507,6 @@ const View1 = ({ setSection }) => {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div
-							className="close-btn-view-1"
-							onClick={() => {
-								setSection("");
-							}}
-						>
-							<i className="fa-solid fa-x"></i>
 						</div>
 					</div>
 					{(getId || getBooked) && (
