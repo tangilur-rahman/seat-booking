@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	box-shadow: var(--box-shadow);
 }
 
 .home-container .left-side .option {
@@ -25,6 +26,10 @@
 	background-color: #eeeffe;
 }
 
+.home-container .left-side .active {
+	background-color: #eeeffe;
+}
+
 .home-container .left-side .option i {
 	font-size: 16px;
 	opacity: 0.7;
@@ -32,6 +37,10 @@
 }
 
 .home-container .left-side .option:hover i {
+	color: #5d5fef;
+}
+
+.home-container .left-side .active i {
 	color: #5d5fef;
 }
 
@@ -45,6 +54,10 @@
 	color: #5d5fef;
 }
 
+.home-container .left-side .active h6 {
+	color: #5d5fef;
+}
+
 .home-container .left-side .option:first-child {
 	margin: 100px 30px 0 0;
 }
@@ -54,5 +67,80 @@
 }
 
 .home-container .right-side {
-	border: 1px solid red;
+	margin: 0 40px;
+	flex-grow: 1;
+}
+
+.home-container .right-side .header {
+	display: flex;
+	height: 90px;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid rgb(220, 220, 214);
+}
+
+.home-container .right-side .header h3 {
+	font-size: 26px;
+}
+
+.home-container .right-side .header button {
+	height: 45px;
+	border-radius: 48px;
+	padding: 0 25px;
+	font-weight: 600;
+	font-size: 17px;
+	border: 1px solid black;
+}
+
+.home-container .right-side .section-container {
+	background-color: white;
+	border-radius: 10px;
+	margin-top: 30px;
+	height: calc(100% - 130px);
+	box-shadow: var(--box-shadow);
+	/* display: flex;
+	justify-content: center; */
+}
+
+.home-container .right-side .section-container .row-1 {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	grid-gap: 15px;
+	padding: 60px 30px 0;
+}
+
+.home-container .right-side .section-container .row-2 {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
+	grid-gap: 15px;
+	padding: 30px;
+}
+
+.right-side .section-container .section {
+	border: 1px solid gray;
+	height: 175px;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 2px -1px 8px -3px rgb(86 25 255);
+	border-radius: 7px;
+}
+
+.right-side .section-container .section h5 {
+	margin: 0;
+	font-size: 22px;
+}
+
+.right-side .section-container .section h6 {
+	margin: 10px 0 0 0;
+	font-size: 19px;
+	color: #5d5fef;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.right-side .section-container .section h6::after {
+	background-color: black;
 }
