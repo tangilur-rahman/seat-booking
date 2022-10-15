@@ -28,6 +28,8 @@
 
 .view-1-container .view-1-wrapper span.active {
 	background-color: #d90429;
+	color: white;
+	font-weight: 600;
 }
 
 .view-1-container .view-1-wrapper span:hover {

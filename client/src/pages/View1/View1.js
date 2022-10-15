@@ -64,7 +64,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											.splice(0, 13)}
@@ -88,7 +99,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(13, 7)}
@@ -106,7 +128,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(20, 7)}
@@ -125,7 +158,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(27, 7)}
@@ -143,7 +187,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(34, 7)}
@@ -162,7 +217,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(41, 7)}
@@ -180,7 +246,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(48, 7)}
@@ -202,7 +279,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(55, 5)}
@@ -221,7 +309,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(60, 5)}
@@ -242,7 +341,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(65, 5)}
@@ -261,7 +371,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(70, 5)}
@@ -282,7 +403,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(75, 5)}
@@ -302,7 +434,18 @@ const View1 = () => {
 																? "active"
 																: ""
 														}
-													></span>
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""}
+													</span>
 												);
 											})
 											?.splice(80, 4)}
