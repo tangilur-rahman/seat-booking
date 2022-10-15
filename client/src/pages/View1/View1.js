@@ -13,6 +13,9 @@ const View1 = () => {
 	// for getting selected seat
 	const [getId, setId] = useState("");
 
+	// for displaying booked value
+	const [getBooked, setBooked] = useState("");
+
 	// for getting all documents
 	const [getDocs, setDocs] = useState("");
 
@@ -58,7 +61,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -93,7 +100,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -122,7 +133,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -152,7 +167,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -181,7 +200,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -211,7 +234,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -240,7 +267,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -273,7 +304,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -303,7 +338,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -335,7 +374,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -365,7 +408,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -397,7 +444,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -428,7 +479,11 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setId(value._id)}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? setBooked(value)
+																: setId(value._id)
+														}
 														className={
 															new Date().getTime() < value?.days_left
 																? "active"
@@ -454,12 +509,14 @@ const View1 = () => {
 							</div>
 						</div>
 					</div>
-					{getId && (
+					{(getId || getBooked) && (
 						<BookingPopUp
 							getId={getId}
 							setId={setId}
 							frow_where={"view-1"}
 							setIsUpdate={setIsUpdate}
+							getBooked={getBooked}
+							setBooked={setBooked}
 						/>
 					)}
 				</div>

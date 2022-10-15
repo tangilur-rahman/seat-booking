@@ -5,13 +5,21 @@ import { toast } from "react-toastify";
 // internal components
 import "./BookingPopUp.css";
 
-const BookingPopUp = ({ getId, setId, frow_where, setIsUpdate }) => {
+const BookingPopUp = ({
+	getId,
+	setId,
+	frow_where,
+	setIsUpdate,
+	getBooked,
+	setBooked
+}) => {
 	// for closing booking-popup when clicked outside start
 	const myRef = useRef();
 
 	const handleClickOutside = (e) => {
 		if (!myRef.current?.contains(e.target)) {
 			setId("");
+			setBooked("");
 		}
 	};
 	useEffect(() => {
@@ -110,68 +118,120 @@ const BookingPopUp = ({ getId, setId, frow_where, setIsUpdate }) => {
 					<h3>Seat Booking</h3>
 					<div className="input-fields-container">
 						<div className="input-field">
-							<input
-								placeholder="Student Name . . ."
-								required
-								onChange={(e) => setSName(e.target.value)}
-							/>
+							{getBooked ? (
+								<div className="displaying">
+									<h6>Student Name : </h6> <p>{getBooked.student_name}</p>
+								</div>
+							) : (
+								<input
+									placeholder="Student Name . . ."
+									required
+									onChange={(e) => setSName(e.target.value)}
+								/>
+							)}
 						</div>
 
 						<div className="input-field">
-							<input
-								type="number"
-								placeholder="Student Number . . ."
-								required
-								onChange={(e) => setSNum(e.target.value)}
-							/>
+							{getBooked ? (
+								<div className="displaying">
+									<h6>Student Number : </h6> <p>{getBooked.student_number}</p>
+								</div>
+							) : (
+								<input
+									type="number"
+									placeholder="Student Number . . ."
+									required
+									onChange={(e) => setSNum(e.target.value)}
+								/>
+							)}
 						</div>
 
 						<div className="input-field">
-							<input
-								placeholder="Guardian Name . . ."
-								required
-								onChange={(e) => setGName(e.target.value)}
-							/>
+							{getBooked ? (
+								<div className="displaying">
+									<h6>Guardian Name : </h6> <p>{getBooked.guardian_name}</p>
+								</div>
+							) : (
+								<input
+									placeholder="Guardian Name . . ."
+									required
+									onChange={(e) => setGName(e.target.value)}
+								/>
+							)}
 						</div>
 
 						<div className="input-field">
-							<input
-								type="number"
-								placeholder="Guardian Number . . ."
-								required
-								onChange={(e) => setGNum(e.target.value)}
-							/>
+							{getBooked ? (
+								<div className="displaying">
+									<h6>Guardian Number : </h6> <p>{getBooked.guardian_number}</p>
+								</div>
+							) : (
+								<input
+									type="number"
+									placeholder="Guardian Number . . ."
+									required
+									onChange={(e) => setGNum(e.target.value)}
+								/>
+							)}
 						</div>
 
 						<div className="input-field">
-							<input
-								type="number"
-								placeholder="Days left . . ."
-								required
-								onChange={(e) => setDay(e.target.value)}
-							/>
+							{getBooked ? (
+								<div className="displaying">
+									<h6>Days Left : </h6>
+									<p>
+										{Math.abs(
+											Math.floor(getBooked.days_left / (3600 * 24 * 1000)) -
+												Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+										)}
+									</p>
+								</div>
+							) : (
+								<input
+									type="number"
+									placeholder="Days left . . ."
+									required
+									onChange={(e) => setDay(e.target.value)}
+								/>
+							)}
 						</div>
 
-						<div className="upload">
-							<p>Upload a image</p>
-						</div>
+						{!getBooked && (
+							<div className="upload">
+								<p>Upload a image</p>
+							</div>
+						)}
 
-						<div className="btn-container">
-							<button
-								type="button"
-								className="btn btn-dark"
-								onClick={() => setId("")}
-							>
-								Cancel
-							</button>
-							<button
-								type="button"
-								className="btn btn-success"
-								onClick={submitHandler}
-							>
-								Submit
-							</button>
-						</div>
+						{!getBooked && (
+							<div className="btn-container">
+								<button
+									type="button"
+									className="btn btn-dark"
+									onClick={() => {
+										setId("");
+										setBooked("");
+									}}
+								>
+									Cancel
+								</button>
+								<button
+									type="button"
+									className="btn btn-success"
+									onClick={submitHandler}
+								>
+									Submit
+								</button>
+							</div>
+						)}
+					</div>
+					<div
+						className="close-btn"
+						onClick={() => {
+							setBooked("");
+							setId("");
+						}}
+					>
+						<i className="fa-solid fa-x"></i>
 					</div>
 				</div>
 
@@ -180,7 +240,7 @@ const BookingPopUp = ({ getId, setId, frow_where, setIsUpdate }) => {
 					name="profile-img"
 					id="change-img"
 					accept="image/png, image/gif, image/jpeg, image/jpg"
-					onChange={""}
+					// onChange={""}
 					style={{ display: "none" }}
 				/>
 			</div>
