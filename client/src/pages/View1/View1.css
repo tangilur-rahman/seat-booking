@@ -1,3 +1,7 @@
+.view-1-main-container {
+	position: relative;
+}
+
 .view-1-container {
 	width: 100vw;
 	height: 100vh;
@@ -13,7 +17,7 @@
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	background-color: rgb(195, 202, 207);
+	background-color: #0ead69;
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -1,6 +1,9 @@
 // external components
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // internal components
 import "./App.css";
 import Home from "./pages/Home/Home";
@@ -17,6 +20,7 @@ function App() {
 					<Route path="view-2" element={<View2 />} />
 				</Routes>
 			</BrowserRouter>
+			<ToastContainer />
 		</>
 	);
 }

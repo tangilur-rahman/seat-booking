@@ -1,0 +1,65 @@
+.booking-popup-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 13vh;
+}
+
+.booking-popup-container .booking-popup-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	box-shadow: var(--box-shadow);
+	padding: 20px 10px 10px !important;
+	border: 4px solid transparent;
+	border-radius: 20px;
+	background: linear-gradient(to right, white, white),
+		linear-gradient(to right, red, blue);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+	height: fit-content;
+}
+
+.booking-popup-wrapper .input-fields-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 95%;
+	margin-bottom: 10px;
+}
+
+.booking-popup-wrapper .input-fields-container .input-field {
+	width: 95%;
+}
+
+.input-fields-container .input-field input {
+	width: 100%;
+	border: 1px solid black;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin: 7px 0;
+	color: #6d6875;
+	font-weight: 600;
+}
+
+.input-fields-container .btn-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.input-fields-container .btn-container button {
+	width: 105px;
+	height: 40px;
+	border-radius: 30px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.input-fields-container .btn-container button:first-child {
+	margin-right: 20px;
+}
