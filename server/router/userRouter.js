@@ -29,19 +29,20 @@ user.post("/submit", async (req, res) => {
 			frow_where
 		} = req.body;
 
-		console.log(req.body);
-
-		const document = await userModel({
-			student_name: getSName,
-			student_number: getSNum,
-			guardian_name: getGName,
-			guardian_number: getGNum,
-			days_left: newDate,
-			booking_seat: getSeat,
-			frow_where
-		});
-
-		await document.save();
+		await userModel.updateOne(
+			{ getSeat: booking_seat },
+			{
+				$set: {
+					student_name: getSName,
+					student_number: getSNum,
+					guardian_name: getGName,
+					guardian_number: getGNum,
+					days_left: newDate,
+					booking_seat: getSeat,
+					frow_where
+				}
+			}
+		);
 
 		res.status(200).json({ message: "Submit successfully." });
 	} catch (error) {
