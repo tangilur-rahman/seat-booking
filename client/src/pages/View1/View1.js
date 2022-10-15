@@ -7,8 +7,11 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 import "./View1.css";
 
 const View1 = () => {
+	// for updating booking
+	const [isUpdate, setIsUpdate] = useState("");
+
 	// for getting selected seat
-	const [getSeat, setSeat] = useState("");
+	const [getId, setId] = useState("");
 
 	// for getting all documents
 	const [getDocs, setDocs] = useState("");
@@ -38,7 +41,7 @@ const View1 = () => {
 				});
 			}
 		})();
-	}, []);
+	}, [isUpdate]);
 	// fetching data from database end
 
 	return (
@@ -55,7 +58,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -74,7 +82,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -87,7 +100,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -101,7 +119,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -114,7 +137,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -128,7 +156,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -141,7 +174,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -158,7 +196,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -172,7 +215,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -188,7 +236,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -202,7 +255,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -218,7 +276,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -233,7 +296,12 @@ const View1 = () => {
 												return (
 													<span
 														key={index}
-														onClick={() => setSeat(value)}
+														onClick={() => setId(value._id)}
+														className={
+															new Date().getTime() < value?.days_left
+																? "active"
+																: ""
+														}
 													></span>
 												);
 											})
@@ -243,11 +311,12 @@ const View1 = () => {
 							</div>
 						</div>
 					</div>
-					{getSeat && (
+					{getId && (
 						<BookingPopUp
-							getSeat={getSeat}
-							setSeat={setSeat}
+							getId={getId}
+							setId={setId}
 							frow_where={"view-1"}
+							setIsUpdate={setIsUpdate}
 						/>
 					)}
 				</div>

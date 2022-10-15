@@ -23,7 +23,7 @@ const schema = mongoose.Schema(
 		},
 
 		days_left: {
-			type: Date,
+			type: Number,
 			trim: true
 		},
 

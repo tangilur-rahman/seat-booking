@@ -19,18 +19,13 @@ user.get("/allDocs", async (req, res) => {
 
 user.post("/submit", async (req, res) => {
 	try {
-		const {
-			getSName,
-			getSNum,
-			getGName,
-			getGNum,
-			newDate,
-			getSeat,
-			frow_where
-		} = req.body;
+		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
+			req.body;
+
+		console.log(req.body);
 
 		await userModel.updateOne(
-			{ getSeat: booking_seat },
+			{ _id: getId },
 			{
 				$set: {
 					student_name: getSName,
@@ -38,7 +33,6 @@ user.post("/submit", async (req, res) => {
 					guardian_name: getGName,
 					guardian_number: getGNum,
 					days_left: newDate,
-					booking_seat: getSeat,
 					frow_where
 				}
 			}

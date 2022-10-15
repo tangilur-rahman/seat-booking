@@ -5,13 +5,13 @@ import { toast } from "react-toastify";
 // internal components
 import "./BookingPopUp.css";
 
-const BookingPopUp = ({ getSeat, setSeat, frow_where }) => {
+const BookingPopUp = ({ getId, setId, frow_where, setIsUpdate }) => {
 	// for closing booking-popup when clicked outside start
 	const myRef = useRef();
 
 	const handleClickOutside = (e) => {
 		if (!myRef.current?.contains(e.target)) {
-			setSeat("");
+			setId("");
 		}
 	};
 	useEffect(() => {
@@ -35,7 +35,9 @@ const BookingPopUp = ({ getSeat, setSeat, frow_where }) => {
 		if (getSName && getSNum && getGName && getGNum && getDay) {
 			// addition days start
 			function addDays(theDate, days) {
-				return new Date(theDate.getTime() + days * 24 * 60 * 60 * 1000);
+				return new Date(
+					theDate.getTime() + days * 24 * 60 * 60 * 1000
+				).getTime();
 			}
 
 			const newDate = addDays(new Date(), getDay);
@@ -48,7 +50,7 @@ const BookingPopUp = ({ getSeat, setSeat, frow_where }) => {
 					getGName,
 					getGNum,
 					newDate,
-					getSeat,
+					getId,
 					frow_where
 				};
 
@@ -67,12 +69,13 @@ const BookingPopUp = ({ getSeat, setSeat, frow_where }) => {
 						autoClose: 2000
 					});
 
-					setSeat("");
+					setId("");
 					setSName("");
 					setSNum("");
 					setGName("");
 					setGNum("");
 					setDay("");
+					setIsUpdate(Date.now());
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
@@ -157,7 +160,7 @@ const BookingPopUp = ({ getSeat, setSeat, frow_where }) => {
 							<button
 								type="button"
 								className="btn btn-dark"
-								onClick={() => setSeat("")}
+								onClick={() => setId("")}
 							>
 								Cancel
 							</button>

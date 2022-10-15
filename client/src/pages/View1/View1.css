@@ -26,6 +26,10 @@
 	cursor: pointer;
 }
 
+.view-1-container .view-1-wrapper span.active {
+	background-color: #d90429;
+}
+
 .view-1-container .view-1-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
