@@ -1,4 +1,5 @@
 // external components
+import { useState } from "react";
 
 // internal components
 import "./View1.css";
@@ -27,6 +28,11 @@ const View1 = () => {
 
 	// for initialization seatList end
 
+	// for getting selected seat
+	const [getSeat, setSeat] = useState("");
+
+	console.log(getSeat);
+
 	return (
 		<>
 			<div className="container-fluid p-0">
@@ -36,7 +42,11 @@ const View1 = () => {
 							<div className="horizontal">
 								<div id="layout-1">
 									{layout1.map((value, index) => {
-										return <span key={index}>{value}</span>;
+										return (
+											<span key={index} onClick={() => setSeat(value)}>
+												{value}
+											</span>
+										);
 									})}
 								</div>
 							</div>
@@ -49,7 +59,11 @@ const View1 = () => {
 								<div id="layout-2-1">
 									{layout2
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 7)}
 								</div>
@@ -57,7 +71,11 @@ const View1 = () => {
 								<div id="layout-2-2">
 									{layout2
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(7, 14)}
 								</div>
@@ -66,7 +84,11 @@ const View1 = () => {
 								<div id="layout-3-1">
 									{layout3
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 7)}
 								</div>
@@ -74,7 +96,11 @@ const View1 = () => {
 								<div id="layout-3-2">
 									{layout3
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(7, 14)}
 								</div>
@@ -83,7 +109,11 @@ const View1 = () => {
 								<div id="layout-4-1">
 									{layout4
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 7)}
 								</div>
@@ -91,7 +121,11 @@ const View1 = () => {
 								<div id="layout-4-2">
 									{layout4
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(7, 14)}
 								</div>
@@ -103,7 +137,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout5
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 5)}
 								</div>
@@ -112,7 +150,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout5
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(5, 10)}
 								</div>
@@ -123,7 +165,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout6
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 5)}
 								</div>
@@ -132,7 +178,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout6
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(5, 10)}
 								</div>
@@ -143,7 +193,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout7
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(0, 5)}
 								</div>
@@ -153,7 +207,11 @@ const View1 = () => {
 									<span className="visibility-none"></span>
 									{layout7
 										.map((value, index) => {
-											return <span key={index}>{value}</span>;
+											return (
+												<span key={index} onClick={() => setSeat(value)}>
+													{value}
+												</span>
+											);
 										})
 										.splice(5, 9)}
 								</div>
