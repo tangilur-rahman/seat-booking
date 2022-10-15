@@ -1,0 +1,39 @@
+.home-container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.home-container .home-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.home-container .home-wrapper button {
+	width: 170px;
+	height: 48px;
+	border-radius: 48px;
+	transform: all 0.5s;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.home-container .home-wrapper button:hover {
+	transform: scale(0.98);
+}
+
+.home-container .home-wrapper button:active {
+	transform: scale(1.01);
+}
+
+.home-container .home-wrapper button:first-child {
+	margin-right: 10px;
+}
+
+.home-container .home-wrapper button:last-child {
+	margin-left: 10px;
+}
+
+.home-container .home-wrapper button span {
+	display: inline-block;
+}
