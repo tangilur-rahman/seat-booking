@@ -3,37 +3,56 @@
 	height: 100vh;
 }
 
-.home-container .home-wrapper {
+.home-container .left-side {
+	background-color: white;
+	border-top-right-radius: 40px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 }
 
-.home-container .home-wrapper button {
-	width: 170px;
-	height: 48px;
-	border-radius: 48px;
-	transform: all 0.5s;
-	font-size: 18px;
-	font-weight: 500;
+.home-container .left-side .option {
+	display: flex;
+	align-items: center;
+	padding: 12px 25px;
+	width: fit-content;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: all 0.3s;
 }
 
-.home-container .home-wrapper button:hover {
-	transform: scale(0.98);
+.home-container .left-side .option:hover {
+	background-color: #eeeffe;
 }
 
-.home-container .home-wrapper button:active {
-	transform: scale(1.01);
+.home-container .left-side .option i {
+	font-size: 16px;
+	opacity: 0.7;
+	margin-right: 20px;
 }
 
-.home-container .home-wrapper button:first-child {
-	margin-right: 10px;
+.home-container .left-side .option:hover i {
+	color: #5d5fef;
 }
 
-.home-container .home-wrapper button:last-child {
-	margin-left: 10px;
+.home-container .left-side .option h6 {
+	margin: 0;
+	font-size: 17px;
+	font-weight: 400;
 }
 
-.home-container .home-wrapper button span {
-	display: inline-block;
+.home-container .left-side .option:hover h6 {
+	color: #5d5fef;
+}
+
+.home-container .left-side .option:first-child {
+	margin: 100px 30px 0 0;
+}
+
+.home-container .left-side .option:nth-child(2) {
+	margin: 0px 20px 0 0;
+}
+
+.home-container .right-side {
+	border: 1px solid red;
 }
