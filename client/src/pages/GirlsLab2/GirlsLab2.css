@@ -1,19 +1,19 @@
-.view-1-main-container {
+.girls-2-main-container {
 	position: relative;
 }
 
-.view-1-container {
+.girls-2-container {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
 
-.view-1-container .view-1-wrapper {
+.girls-2-container .girls-2-wrapper {
 	margin: 30px 0;
 }
 
-.view-1-container .view-1-wrapper span {
+.girls-2-container .girls-2-wrapper span {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
@@ -26,35 +26,35 @@
 	cursor: pointer;
 }
 
-.view-1-container .view-1-wrapper span.active {
+.girls-2-container .girls-2-wrapper span.active {
 	background-color: #d90429;
 	color: white;
 	font-weight: 600;
 }
 
-.view-1-container .view-1-wrapper span:hover {
+.girls-2-container .girls-2-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
 }
 
-.view-1-container .view-1-wrapper span.visibility-none {
+.girls-2-container .girls-2-wrapper span.visibility-none {
 	visibility: hidden;
 }
 
-.view-1-container .view-1-wrapper .horizontal-container {
+.girls-2-container .girls-2-wrapper .horizontal-container {
 	display: flex;
 }
 
-.view-1-container .view-1-wrapper .horizontal {
+.girls-2-container .girls-2-wrapper .horizontal {
 	width: 80%;
 }
 
-.view-1-container .view-1-wrapper .horizontal-remain {
+.girls-2-container .girls-2-wrapper .horizontal-remain {
 	border-bottom: 3px solid #a5a5a5;
 	width: 20%;
 }
 
-.view-1-container .view-1-wrapper .horizontal #layout-1 {
+.girls-2-container .girls-2-wrapper .horizontal #layout-1 {
 	width: 100%;
 	height: 100px;
 	border-top: 3px solid #a5a5a5;
@@ -67,7 +67,7 @@
 	align-items: center;
 }
 
-.view-1-container .view-1-wrapper .vertical {
+.girls-2-container .girls-2-wrapper .vertical {
 	width: 100%;
 	height: calc(100% - 100px);
 	display: grid;
@@ -76,7 +76,7 @@
 }
 
 /* layout-2 start  */
-.view-1-wrapper .vertical #layout-2 {
+.girls-2-wrapper .vertical #layout-2 {
 	display: flex;
 	justify-content: space-evenly;
 	border-left: 3px solid #a5a5a5;
@@ -85,13 +85,13 @@
 	border-bottom-left-radius: 5px;
 }
 
-.view-1-wrapper .vertical #layout-2-1 {
+.girls-2-wrapper .vertical #layout-2-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-2-2 {
+.girls-2-wrapper .vertical #layout-2-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -99,20 +99,20 @@
 /* layout-2 end  */
 
 /* layout-3 start  */
-.view-1-wrapper .vertical #layout-3 {
+.girls-2-wrapper .vertical #layout-3 {
 	display: flex;
 	justify-content: space-evenly;
 	border-right: 3px solid #a5a5a5;
 	border-bottom: 3px solid #a5a5a5;
 }
 
-.view-1-wrapper .vertical #layout-3-1 {
+.girls-2-wrapper .vertical #layout-3-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-3-2 {
+.girls-2-wrapper .vertical #layout-3-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -120,19 +120,19 @@
 /* layout-3 end  */
 
 /* layout-4 start  */
-.view-1-wrapper .vertical #layout-4 {
+.girls-2-wrapper .vertical #layout-4 {
 	display: flex;
 	justify-content: space-evenly;
 	border-bottom: 3px solid #a5a5a5;
 }
 
-.view-1-wrapper .vertical #layout-4-1 {
+.girls-2-wrapper .vertical #layout-4-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-4-2 {
+.girls-2-wrapper .vertical #layout-4-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -140,7 +140,7 @@
 /* layout-4 end  */
 
 /* layout-5 start  */
-.view-1-wrapper .vertical #layout-5 {
+.girls-2-wrapper .vertical #layout-5 {
 	display: flex;
 	justify-content: space-evenly;
 	border-left: 3px solid #a5a5a5;
@@ -148,7 +148,7 @@
 	position: relative;
 }
 
-.view-1-wrapper .vertical #layout-5::after {
+.girls-2-wrapper .vertical #layout-5::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -158,13 +158,13 @@
 	background-color: #a5a5a5;
 }
 
-.view-1-wrapper .vertical #layout-5-1 {
+.girls-2-wrapper .vertical #layout-5-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-5-2 {
+.girls-2-wrapper .vertical #layout-5-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -172,14 +172,14 @@
 /* layout-5 end  */
 
 /* layout-6 start  */
-.view-1-wrapper .vertical #layout-6 {
+.girls-2-wrapper .vertical #layout-6 {
 	display: flex;
 	justify-content: space-evenly;
 	border-bottom: 3px solid #a5a5a5;
 	position: relative;
 }
 
-.view-1-wrapper .vertical #layout-6::after {
+.girls-2-wrapper .vertical #layout-6::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -189,13 +189,13 @@
 	background-color: #a5a5a5;
 }
 
-.view-1-wrapper .vertical #layout-6-1 {
+.girls-2-wrapper .vertical #layout-6-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-6-2 {
+.girls-2-wrapper .vertical #layout-6-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -203,7 +203,7 @@
 /* layout-6 end  */
 
 /* layout-7 start  */
-.view-1-wrapper .vertical #layout-7 {
+.girls-2-wrapper .vertical #layout-7 {
 	display: flex;
 	justify-content: space-evenly;
 	border-right: 3px solid #a5a5a5;
@@ -211,13 +211,13 @@
 	border-bottom-right-radius: 5px;
 }
 
-.view-1-wrapper .vertical #layout-7-1 {
+.girls-2-wrapper .vertical #layout-7-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-1-wrapper .vertical #layout-7-2 {
+.girls-2-wrapper .vertical #layout-7-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;

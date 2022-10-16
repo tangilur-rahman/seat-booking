@@ -6,9 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 // internal components
 import "./App.css";
+import GirlsLab2 from "./pages/GirlsLab2/GirlsLab2";
 import Home from "./pages/Home/Home";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import View1 from "./pages/View1/View1";
 import View2 from "./pages/View2/View2";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="ridhima-girls-lab-1" element={<View1 />} />
+					<Route path="ridhima-girls-lab-1" element={<GirlsLab2 />} />
 					<Route path="ridhima-girls-lab-2" element={<View2 />} />
 
 					<Route path="*" element={<NotFoundPage />} />
