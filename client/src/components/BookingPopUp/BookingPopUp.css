@@ -58,6 +58,7 @@
 .booking-popup-container .booking-popup-wrapper .close-btn i {
 	font-size: 20px;
 	transition: all 0.3s;
+	color: #d90429;
 }
 
 .booking-popup-container .booking-popup-wrapper .close-btn i:hover {

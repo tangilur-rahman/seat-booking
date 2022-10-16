@@ -19,14 +19,14 @@
 /* close-btn style start  */
 .boys-1-container .close-btn-boys-1 {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 0px;
+	right: 0px;
 	cursor: pointer;
 	display: flex;
 	width: fit-content;
 	background-color: #d7e2ea;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
 	justify-content: center;
 	align-items: center;
@@ -44,6 +44,7 @@
 .boys-1-container .close-btn-boys-1 i {
 	font-size: 20px;
 	transition: all 0.3s;
+	color: #d90429;
 }
 
 .boys-1-container .close-btn-boys-1 i:hover {
@@ -53,8 +54,8 @@
 
 .boys-1-container .boys-1-wrapper span {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 36px;
+	height: 36px;
 	background-color: #0ead69;
 	display: flex;
 	justify-content: center;
@@ -83,27 +84,141 @@
 
 .boys-1-container .boys-1-wrapper {
 	display: flex;
-	border: 1px solid red;
 	justify-content: space-evenly;
 }
 
 .boys-1-wrapper #layout-1 {
-	border: 1px solid red;
 	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-1::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+.boys-1-wrapper #layout-1 .exit-message {
+	position: absolute;
+	left: 13%;
+	bottom: 40%;
+}
+
+.boys-1-wrapper #layout-1 .exit-message p {
+	margin: 0;
+}
+
+.boys-1-wrapper #layout-1 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #left #up {
+	height: 54%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #left #down {
+	height: 37%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #right {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .boys-1-wrapper #layout-2 {
-	border: 1px solid red;
 	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-2::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+.boys-1-wrapper #layout-2 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-2 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .boys-1-wrapper #layout-3 {
-	border: 1px solid red;
 	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-3::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+.boys-1-wrapper #layout-3 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-3 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .boys-1-wrapper #layout-4 {
-	border: 1px solid red;
 	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.boys-1-wrapper #layout-4 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-4 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 /* layout-style end */

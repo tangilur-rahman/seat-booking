@@ -42,6 +42,7 @@
 .boys-2-container .close-btn-boys-2 i {
 	font-size: 15px;
 	transition: all 0.3s;
+	color: #d90429;
 }
 
 .boys-2-container .close-btn-boys-2 i:hover {

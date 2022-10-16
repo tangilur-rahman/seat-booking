@@ -57,10 +57,586 @@ const BoysLab1 = ({ setSelectedLab }) => {
 				>
 					<div className="row m-0 boys-1-container">
 						<div className="col-12 p-0 boys-1-wrapper">
-							<div id="layout-1">layout-1</div>
-							<div id="layout-2">layout-2</div>
-							<div id="layout-3">layout-3</div>
-							<div id="layout-4">layout-4</div>
+							<div id="layout-1">
+								<div id="left">
+									<div id="up">
+										{getDocs
+											.map((value, index) => {
+												return (
+													<span
+														key={index}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
+																: setId(value._id)
+														}
+														className={
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
+																: ""
+														}
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
+															: ""}
+
+														{/* {value.booking_seat} */}
+													</span>
+												);
+											})
+											.splice(0, 6)}
+									</div>
+									<div id="down">
+										{getDocs
+											.map((value, index) => {
+												return (
+													<span
+														key={index}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
+																: setId(value._id)
+														}
+														className={
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
+																: ""
+														}
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
+															: ""}
+
+														{/* {value.booking_seat} */}
+													</span>
+												);
+											})
+											.splice(6, 4)}
+									</div>
+								</div>
+
+								<div id="right">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(10, 11)}
+								</div>
+
+								<div className="exit-message">
+									<p>Entry / Exit</p>
+								</div>
+							</div>
+
+							<div id="layout-2">
+								<div id="left">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(21, 11)}
+								</div>
+
+								<div id="right">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(32, 11)}
+								</div>
+							</div>
+							<div id="layout-3">
+								<div id="left">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(43, 11)}
+								</div>
+
+								<div id="right">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(54, 11)}
+								</div>
+							</div>
+							<div id="layout-4">
+								<div id="left">
+									<span className="visibility-none"></span>
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(65, 11)}
+								</div>
+
+								<div id="right">
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{/* {value.booking_seat} */}
+												</span>
+											);
+										})
+										.splice(76, 12)}
+								</div>
+							</div>
 						</div>
 						<div
 							className="close-btn-boys-1"
