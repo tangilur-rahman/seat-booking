@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 
 // internal components
-import "./View2.css";
+import "./BoysLab2.css";
 
-const View1 = () => {
+const BoysLab2 = () => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -50,9 +50,9 @@ const View1 = () => {
 	return (
 		<>
 			{getDocs.length > 0 && (
-				<div className="container-fluid p-0 view-2-main-container">
-					<div className="row m-0 view-2-container">
-						<div className="col-xl-10 col-lg-11 col-11 p-0 view-2-wrapper">
+				<div className="container-fluid p-0 boys-2-main-container">
+					<div className="row m-0 boys-2-container">
+						<div className="col-xl-10 col-lg-11 col-11 p-0 boys-2-wrapper">
 							<div id="top-layout">
 								<span className="visibility-none"></span>
 								{getDocs
@@ -763,4 +763,4 @@ const View1 = () => {
 	);
 };
 
-export default View1;
+export default BoysLab2;

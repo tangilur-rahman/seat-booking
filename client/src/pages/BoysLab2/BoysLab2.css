@@ -1,22 +1,22 @@
-.view-2-main-container {
+.boys-2-main-container {
 	position: relative;
 }
 
-.view-2-container {
+.boys-2-container {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
 
-.view-2-container .view-2-wrapper {
+.boys-2-container .boys-2-wrapper {
 	margin: 30px 0;
 	border: 3px solid #a5a5a5;
 	border-radius: 5px;
 	position: relative;
 }
 
-.view-2-container .view-2-wrapper span {
+.boys-2-container .boys-2-wrapper span {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
@@ -29,22 +29,22 @@
 	cursor: pointer;
 }
 
-.view-2-container .view-2-wrapper span.active {
+.boys-2-container .boys-2-wrapper span.active {
 	background-color: #d90429;
 	color: white;
 	font-weight: 600;
 }
 
-.view-2-container .view-2-wrapper span:hover {
+.boys-2-container .boys-2-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
 }
 
-.view-2-container .view-2-wrapper span.visibility-none {
+.boys-2-container .boys-2-wrapper span.visibility-none {
 	visibility: hidden;
 }
 
-.view-2-wrapper #top-layout {
+.boys-2-wrapper #top-layout {
 	width: 100%;
 	height: 60px;
 	display: flex;
@@ -52,13 +52,13 @@
 	align-items: flex-end;
 }
 
-.view-2-wrapper .middle-layout-container {
+.boys-2-wrapper .middle-layout-container {
 	display: flex;
 	width: 100%;
 	height: 91.5%;
 }
 
-.view-2-wrapper #left-layout {
+.boys-2-wrapper #left-layout {
 	height: 100%;
 	width: 60px;
 	display: flex;
@@ -69,7 +69,7 @@
 	margin-top: -11px;
 }
 
-.view-2-wrapper #middle-layout {
+.boys-2-wrapper #middle-layout {
 	display: inline-block;
 	width: calc(100% - 60px);
 	height: calc(100% - 60px);
@@ -78,7 +78,7 @@
 	margin-right: 100px;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-1 {
+.boys-2-wrapper #middle-layout #middle-layout-1 {
 	flex-grow: 1;
 	display: flex;
 	align-items: flex-end;
@@ -88,7 +88,7 @@
 	position: relative;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-2 {
+.boys-2-wrapper #middle-layout #middle-layout-2 {
 	flex-grow: 1;
 	position: relative;
 	display: flex;
@@ -96,19 +96,19 @@
 	padding: 0 20px;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-2-1 {
+.boys-2-wrapper #middle-layout #middle-layout-2-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-2-2 {
+.boys-2-wrapper #middle-layout #middle-layout-2-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-3 {
+.boys-2-wrapper #middle-layout #middle-layout-3 {
 	flex-grow: 1;
 	position: relative;
 	display: flex;
@@ -116,19 +116,19 @@
 	padding: 0 20px;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-3-1 {
+.boys-2-wrapper #middle-layout #middle-layout-3-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-3-2 {
+.boys-2-wrapper #middle-layout #middle-layout-3-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-4 {
+.boys-2-wrapper #middle-layout #middle-layout-4 {
 	flex-grow: 1;
 	position: relative;
 	display: flex;
@@ -136,19 +136,19 @@
 	padding: 0 20px;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-4-1 {
+.boys-2-wrapper #middle-layout #middle-layout-4-1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-4-2 {
+.boys-2-wrapper #middle-layout #middle-layout-4-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-5 {
+.boys-2-wrapper #middle-layout #middle-layout-5 {
 	flex-grow: 1;
 	display: flex;
 	align-items: flex-end;
@@ -158,7 +158,7 @@
 	position: relative;
 }
 
-.view-2-wrapper #bottom-layout {
+.boys-2-wrapper #bottom-layout {
 	position: absolute;
 	bottom: 0;
 	left: 53px;
@@ -170,7 +170,7 @@
 }
 
 /* for border style start  */
-.view-2-wrapper #middle-layout #middle-layout-1::after {
+.boys-2-wrapper #middle-layout #middle-layout-1::after {
 	content: "";
 	position: absolute;
 	top: 7%;
@@ -180,7 +180,7 @@
 	background-color: #a5a5a5;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-2::after {
+.boys-2-wrapper #middle-layout #middle-layout-2::after {
 	content: "";
 	position: absolute;
 	top: 7%;
@@ -190,7 +190,7 @@
 	background-color: #a5a5a5;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-3::after {
+.boys-2-wrapper #middle-layout #middle-layout-3::after {
 	content: "";
 	position: absolute;
 	top: 7%;
@@ -200,7 +200,7 @@
 	background-color: #a5a5a5;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-4::after {
+.boys-2-wrapper #middle-layout #middle-layout-4::after {
 	content: "";
 	position: absolute;
 	top: 7%;
@@ -210,7 +210,7 @@
 	background-color: #a5a5a5;
 }
 
-.view-2-wrapper #middle-layout #middle-layout-5::after {
+.boys-2-wrapper #middle-layout #middle-layout-5::after {
 	content: "";
 	position: absolute;
 	top: 7%;
