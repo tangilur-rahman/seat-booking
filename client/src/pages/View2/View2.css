@@ -1,19 +1,21 @@
-.view-1-main-container {
+.view-2-main-container {
 	position: relative;
 }
 
-.view-1-container {
+.view-2-container {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 }
 
-.view-1-container .view-1-wrapper {
+.view-2-container .view-2-wrapper {
 	margin: 30px 0;
+	border: 3px solid #a5a5a5;
+	border-radius: 5px;
 }
 
-.view-1-container .view-1-wrapper span {
+.view-2-container .view-2-wrapper span {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
@@ -26,17 +28,34 @@
 	cursor: pointer;
 }
 
-.view-1-container .view-1-wrapper span.active {
+.view-2-container .view-2-wrapper span.active {
 	background-color: #d90429;
 	color: white;
 	font-weight: 600;
 }
 
-.view-1-container .view-1-wrapper span:hover {
+.view-2-container .view-2-wrapper span:hover {
 	background-color: #1b479e;
 	color: white;
 }
 
-.view-1-container .view-1-wrapper span.visibility-none {
+.view-2-container .view-2-wrapper span.visibility-none {
 	visibility: hidden;
+}
+
+.view-2-wrapper #top-layout {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+}
+
+.view-2-wrapper #left-layout {
+	height: 91.5%;
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-end;
 }
