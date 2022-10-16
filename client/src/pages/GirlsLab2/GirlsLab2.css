@@ -94,6 +94,16 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-1::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 86%;
+}
+
 .girls-2-wrapper #layout-1 #top {
 	display: flex;
 	justify-content: space-evenly;
@@ -110,7 +120,6 @@
 	padding: 20px 20px 0;
 	border-left: 3px solid #a5a5a5;
 	border-bottom: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
 	border-bottom-left-radius: 10px;
 }
 
@@ -133,6 +142,16 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-2::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 86%;
+}
+
 .girls-2-wrapper #layout-2 #top {
 	display: flex;
 	justify-content: space-evenly;
@@ -146,7 +165,6 @@
 	height: 100%;
 	padding: 20px 20px 0;
 	border-bottom: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
 }
 
 .girls-2-wrapper #layout-2 #bottom-1 {
@@ -168,6 +186,16 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-3::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 86%;
+}
+
 .girls-2-wrapper #layout-3 #top {
 	display: flex;
 	justify-content: space-evenly;
@@ -181,7 +209,6 @@
 	height: 100%;
 	padding: 20px 20px 0;
 	border-bottom: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
 }
 
 .girls-2-wrapper #layout-3 #bottom-1 {
@@ -203,6 +230,16 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-4::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 63%;
+}
+
 .girls-2-wrapper #layout-4 #top {
 	display: flex;
 	justify-content: flex-start;
@@ -217,7 +254,6 @@
 	margin-top: 20px;
 	padding: 0 20px;
 	border-bottom: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
 }
 
 .girls-2-wrapper #layout-4 #bottom-1 {
@@ -239,6 +275,16 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-5::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 63%;
+}
+
 .girls-2-wrapper #layout-5 #top {
 	display: flex;
 	justify-content: space-evenly;
@@ -255,7 +301,6 @@
 	margin-top: 20px;
 	padding: 0 20px;
 	border-bottom: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
 }
 
 .girls-2-wrapper #layout-5 #bottom-1 {
@@ -293,7 +338,6 @@
 	border-bottom: 3px solid #a5a5a5;
 	border-right: 3px solid #a5a5a5;
 	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
 }
 
 .girls-2-wrapper #layout-6 #bottom-1 {
