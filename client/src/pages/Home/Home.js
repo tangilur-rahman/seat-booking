@@ -1,16 +1,16 @@
 // external components
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 // internal components
+import GirlsLab2 from "../GirlsLab2/GirlsLab2";
 import "./Home.css";
 
 const Home = () => {
-	// for redirect router
-	const Navigate = useNavigate();
-
 	// for getting option
 	const [getOption, setOption] = useState("seats");
+
+	// for lab selection
+	const [selectedLab, setSelectedLab] = useState("");
 
 	return (
 		<>
@@ -52,7 +52,7 @@ const Home = () => {
 									<h5>Ridhima Girls Lab 1</h5>
 									<h6
 										className="hover-link"
-										onClick={() => Navigate("ridhima-girls-lab-1")}
+										onClick={() => setSelectedLab("ridhima-girls-lab-1")}
 									>
 										View Seats
 									</h6>
@@ -61,33 +61,56 @@ const Home = () => {
 									<h5>Ridhima Girls Lab 2</h5>
 									<h6
 										className="hover-link"
-										onClick={() => Navigate("ridhima-girls-lab-2")}
+										onClick={() => setSelectedLab("ridhima-girls-lab-2")}
 									>
 										View Seats
 									</h6>
 								</div>
 								<div className="section">
 									<h5>Ridhima Basement Lab</h5>
-									<h6 className="hover-link">View Seats</h6>
+									<h6
+										className="hover-link"
+										onClick={() => setSelectedLab("ridhima-basement-lab")}
+									>
+										View Seats
+									</h6>
 								</div>
 							</div>
 
 							<div className="row-2">
 								<div className="section">
 									<h5>Ridhima Boys Labs 1</h5>
-									<h6 className="hover-link">View Seats</h6>
+									<h6
+										className="hover-link"
+										onClick={() => setSelectedLab("ridhima-boys-lab-1")}
+									>
+										View Seats
+									</h6>
 								</div>
 								<div className="section">
 									<h5>Ridhima Boys Lab 2</h5>
-									<h6 className="hover-link">View Seats</h6>
+									<h6
+										className="hover-link"
+										onClick={() => setSelectedLab("ridhima-boys-lab-2")}
+									>
+										View Seats
+									</h6>
 								</div>
 								<div className="section">
 									<h5>Ridhima Theory Lab</h5>
-									<h6 className="hover-link">View Seats</h6>
+									<h6
+										className="hover-link"
+										onClick={() => setSelectedLab("ridhima-theory-lab")}
+									>
+										View Seats
+									</h6>
 								</div>
 							</div>
 						</div>
 					</div>
+					{selectedLab === "ridhima-girls-lab-2" && (
+						<GirlsLab2 setSelectedLab={setSelectedLab} />
+					)}
 				</div>
 			</div>
 		</>

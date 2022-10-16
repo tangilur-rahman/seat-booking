@@ -6,7 +6,7 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 // internal components
 import "./GirlsLab2.css";
 
-const GirlsLab2 = () => {
+const GirlsLab2 = ({ setSelectedLab }) => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -50,9 +50,13 @@ const GirlsLab2 = () => {
 	return (
 		<>
 			{getDocs.length > 0 && (
-				<div className="container-fluid p-0 girls-2-main-container">
+				<div
+					className="container-fluid p-0 girls-2-main-container"
+					data-aos="fade-down"
+					data-aos-duration="700"
+				>
 					<div className="row m-0 girls-2-container">
-						<div className="col-xl-10 col-lg-11 col-11 p-0 girls-2-wrapper">
+						<div className="col-12 p-0 girls-2-wrapper">
 							<div className="horizontal-container">
 								<div className="horizontal">
 									<div id="layout-1">
@@ -897,6 +901,14 @@ const GirlsLab2 = () => {
 									</div>
 								</div>
 							</div>
+						</div>
+						<div
+							className="close-btn-girls-2"
+							onClick={() => {
+								setSelectedLab("");
+							}}
+						>
+							<i className="fa-solid fa-x"></i>
 						</div>
 					</div>
 					{(getId || getBooked) && (
