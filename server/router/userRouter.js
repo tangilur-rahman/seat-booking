@@ -23,6 +23,20 @@ user.post("/submit", async (req, res) => {
 		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
 			req.body;
 
+		// for (let index = 1; index <= 84; index++) {
+		// 	const documents = await userModel({
+		// 		student_name: "",
+		// 		student_number: "",
+		// 		guardian_name: "",
+		// 		guardian_number: "",
+		// 		days_left: null,
+		// 		frow_where: "ridhima-girls-lab-2",
+		// 		booking_seat: index
+		// 	});
+
+		// 	await documents.save();
+		// }
+
 		await userModel.updateOne(
 			{ _id: getId },
 			{
