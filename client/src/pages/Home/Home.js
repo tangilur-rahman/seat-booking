@@ -74,11 +74,11 @@ const Home = () => {
 
 							<div className="row-2">
 								<div className="section">
-									<h5>Ridhima Boy Labs 1</h5>
+									<h5>Ridhima Boys Labs 1</h5>
 									<h6 className="hover-link">View Seats</h6>
 								</div>
 								<div className="section">
-									<h5>Ridhima Girls Lab 2</h5>
+									<h5>Ridhima Boys Lab 2</h5>
 									<h6 className="hover-link">View Seats</h6>
 								</div>
 								<div className="section">

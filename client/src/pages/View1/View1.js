@@ -80,7 +80,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -119,7 +129,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -152,7 +172,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -186,7 +216,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -219,7 +259,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -253,7 +303,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -286,7 +346,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -323,7 +393,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -357,7 +437,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -393,7 +483,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -427,7 +527,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -463,7 +573,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
@@ -498,7 +618,17 @@ const View1 = () => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
 															: ""}
 													</span>
 												);
