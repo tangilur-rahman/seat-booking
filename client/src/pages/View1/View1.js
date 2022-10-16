@@ -903,7 +903,7 @@ const View1 = () => {
 						<BookingPopUp
 							getId={getId}
 							setId={setId}
-							frow_where={"view-1"}
+							frow_where={"ridhima-girls-lab-1"}
 							setIsUpdate={setIsUpdate}
 							getBooked={getBooked}
 							setBooked={setBooked}
