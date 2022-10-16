@@ -68,7 +68,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -117,7 +127,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -160,7 +180,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -204,7 +234,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -247,7 +287,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -291,7 +341,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -334,7 +394,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -381,7 +451,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -425,7 +505,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -471,7 +561,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -515,7 +615,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -561,7 +671,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
@@ -606,7 +726,17 @@ const View1 = () => {
 														}
 														className={
 															new Date().getTime() < value?.days_left
-																? "active"
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
 																: ""
 														}
 													>
