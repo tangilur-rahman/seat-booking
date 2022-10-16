@@ -112,7 +112,583 @@ const View1 = () => {
 									.splice(0, 21)}
 							</div>
 
-							<div id="left-layout">
+							<div className="middle-layout-container">
+								<div id="left-layout">
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+												</span>
+											);
+										})
+										.splice(21, 12)}
+								</div>
+
+								<div id="middle-layout">
+									<div id="middle-layout-1">
+										{getDocs
+											.map((value, index) => {
+												return (
+													<span
+														key={index}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
+																: setId(value._id)
+														}
+														className={
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
+																: ""
+														}
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
+															: ""}
+													</span>
+												);
+											})
+											.splice(33, 7)}
+									</div>
+									<div id="middle-layout-2">
+										<div id="middle-layout-2-1">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(40, 7)}
+										</div>
+
+										<div id="middle-layout-2-2">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(47, 7)}
+										</div>
+									</div>
+									<div id="middle-layout-3">
+										<div id="middle-layout-3-1">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(54, 7)}
+										</div>
+
+										<div id="middle-layout-3-2">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(61, 7)}
+										</div>
+									</div>
+									<div id="middle-layout-4">
+										<div id="middle-layout-4-1">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(68, 7)}
+										</div>
+
+										<div id="middle-layout-4-2">
+											{getDocs
+												.map((value, index) => {
+													return (
+														<span
+															key={index}
+															onClick={() =>
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? setBooked(value)
+																		: setId(value._id)
+																	: setId(value._id)
+															}
+															className={
+																new Date().getTime() < value?.days_left
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  ) !== 0
+																		? "active"
+																		: ""
+																	: ""
+															}
+														>
+															{new Date().getTime() < value.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? Math.abs(
+																			Math.floor(
+																				value.days_left / (3600 * 24 * 1000)
+																			) -
+																				Math.floor(
+																					new Date().getTime() /
+																						(3600 * 24 * 1000)
+																				)
+																	  )
+																	: ""
+																: ""}
+														</span>
+													);
+												})
+												.splice(75, 7)}
+										</div>
+									</div>
+									<div id="middle-layout-5">
+										{getDocs
+											.map((value, index) => {
+												return (
+													<span
+														key={index}
+														onClick={() =>
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
+																: setId(value._id)
+														}
+														className={
+															new Date().getTime() < value?.days_left
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? "active"
+																	: ""
+																: ""
+														}
+													>
+														{new Date().getTime() < value.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
+															: ""}
+													</span>
+												);
+											})
+											.splice(82, 7)}
+									</div>
+								</div>
+							</div>
+
+							<div id="bottom-layout">
 								{getDocs
 									.map((value, index) => {
 										return (
@@ -167,7 +743,7 @@ const View1 = () => {
 											</span>
 										);
 									})
-									.splice(21, 12)}
+									.splice(89, 20)}
 							</div>
 						</div>
 					</div>
