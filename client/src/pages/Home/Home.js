@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 // internal components
+import BoysLab1 from "../BoysLab1/BoysLab1";
 import BoysLab2 from "../BoysLab2/BoysLab2";
 import GirlsLab2 from "../GirlsLab2/GirlsLab2";
 import "./Home.css";
@@ -111,6 +112,10 @@ const Home = () => {
 					</div>
 					{selectedLab === "ridhima-girls-lab-2" && (
 						<GirlsLab2 setSelectedLab={setSelectedLab} />
+					)}
+
+					{selectedLab === "ridhima-boys-lab-1" && (
+						<BoysLab1 setSelectedLab={setSelectedLab} />
 					)}
 
 					{selectedLab === "ridhima-boys-lab-2" && (
