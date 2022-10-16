@@ -63,7 +63,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -122,7 +132,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -175,7 +195,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -229,7 +259,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -282,7 +322,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -336,7 +386,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -389,7 +449,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -446,7 +516,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -500,7 +580,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -556,7 +646,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -610,7 +710,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -666,7 +776,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
@@ -721,7 +841,17 @@ const View1 = () => {
 														key={index}
 														onClick={() =>
 															new Date().getTime() < value?.days_left
-																? setBooked(value)
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  ) !== 0
+																	? setBooked(value)
+																	: setId(value._id)
 																: setId(value._id)
 														}
 														className={
