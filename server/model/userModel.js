@@ -8,7 +8,7 @@ const schema = mongoose.Schema(
 		},
 
 		student_number: {
-			type: Number,
+			type: String,
 			trim: true
 		},
 

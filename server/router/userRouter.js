@@ -1,11 +1,12 @@
 // external modules
 const user = require("express").Router();
 
+// internal modules
 const userModel = require("./../model/userModel");
 
 user.get("/allDocs", async (req, res) => {
 	try {
-		const documents = await userModel.find({});
+		const documents = await userModel.find({ frow_where: req.query.lab });
 
 		if (documents) {
 			res.status(200).json(documents);
@@ -21,8 +22,6 @@ user.post("/submit", async (req, res) => {
 	try {
 		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
 			req.body;
-
-		console.log(req.body);
 
 		await userModel.updateOne(
 			{ _id: getId },
@@ -45,5 +44,3 @@ user.post("/submit", async (req, res) => {
 });
 
 module.exports = user;
-
-// internal modules

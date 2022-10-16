@@ -23,7 +23,7 @@ const View1 = () => {
 	useEffect(() => {
 		(async () => {
 			try {
-				const response = await fetch("/user/allDocs");
+				const response = await fetch("/user/allDocs?lab=ridhima-girls-lab-1");
 
 				const result = await response.json();
 
