@@ -106,8 +106,27 @@
 
 .girls-2-wrapper #layout-1 #count-section {
 	position: absolute;
-	top: 50%;
-	left: 33%;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.girls-2-wrapper #layout-1 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-2-wrapper #layout-1 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-2-wrapper #layout-1 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
 }
 
 .girls-2-wrapper #layout-1 #top {
@@ -150,8 +169,27 @@
 
 .girls-2-wrapper #layout-2 #count-section {
 	position: absolute;
-	top: 50%;
-	left: 33%;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.girls-2-wrapper #layout-2 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-2-wrapper #layout-2 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-2-wrapper #layout-2 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
 }
 
 .girls-2-wrapper #layout-2::after {
@@ -200,8 +238,27 @@
 
 .girls-2-wrapper #layout-3 #count-section {
 	position: absolute;
-	top: 50%;
-	left: 33%;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.girls-2-wrapper #layout-3 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-2-wrapper #layout-3 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-2-wrapper #layout-3 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
 }
 
 .girls-2-wrapper #layout-3::after {
@@ -250,8 +307,27 @@
 
 .girls-2-wrapper #layout-4 #count-section {
 	position: absolute;
-	top: 20%;
-	right: -16%;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.girls-2-wrapper #layout-4 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-2-wrapper #layout-4 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-2-wrapper #layout-4 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
 }
 
 .girls-2-wrapper #layout-4::after {
@@ -299,12 +375,6 @@
 	position: relative;
 }
 
-.girls-2-wrapper #layout-5 #count-section {
-	position: absolute;
-	top: 20%;
-	right: -16%;
-}
-
 .girls-2-wrapper #layout-5::after {
 	content: "";
 	position: absolute;
@@ -350,6 +420,31 @@
 	flex-direction: column;
 	flex-grow: 1;
 	position: relative;
+}
+
+.girls-2-wrapper #layout-6 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.girls-2-wrapper #layout-6 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-2-wrapper #layout-6 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-2-wrapper #layout-6 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
 }
 
 .girls-2-wrapper #layout-6 #top {

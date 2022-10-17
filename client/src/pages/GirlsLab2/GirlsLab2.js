@@ -336,10 +336,12 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 
 								<div id="count-section">
 									<p>
-										Booked : <b>{girlsLab_2L_1.length}</b>{" "}
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_2L_1.length}</h6>
 									</p>
 									<p>
-										Empty : <b>{18 - girlsLab_2L_1.length}</b>{" "}
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - girlsLab_2L_1.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -538,10 +540,12 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 
 								<div id="count-section">
 									<p>
-										Booked : <b>{girlsLab_2L_2.length}</b>{" "}
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_2L_2.length}</h6>
 									</p>
 									<p>
-										Empty : <b>{18 - girlsLab_2L_2.length}</b>{" "}
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - girlsLab_2L_2.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -740,10 +744,12 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 
 								<div id="count-section">
 									<p>
-										Booked : <b>{girlsLab_2L_3.length}</b>{" "}
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_2L_3.length}</h6>
 									</p>
 									<p>
-										Empty : <b>{18 - girlsLab_2L_3.length}</b>{" "}
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - girlsLab_2L_3.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -946,10 +952,12 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 
 								<div id="count-section">
 									<p>
-										Booked : <b>{girlsLab_2L_4.length}</b>{" "}
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_2L_4.length}</h6>
 									</p>
 									<p>
-										Empty : <b>{16 - girlsLab_2L_4.length}</b>{" "}
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{16 - girlsLab_2L_4.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -1092,15 +1100,6 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											.splice(70, 5)}
 									</div>
 								</div>
-
-								<div id="count-section">
-									<p>
-										Booked : <b>{girlsLab_2L_5.length}</b>{" "}
-									</p>
-									<p>
-										Empty : <b>{14 - girlsLab_2L_5.length}</b>{" "}
-									</p>
-								</div>
 							</div>
 
 							<div id="layout-6">
@@ -1241,6 +1240,16 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											})
 											.splice(80, 4)}
 									</div>
+								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_2L_5.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{14 - girlsLab_2L_5.length}</h6>
+									</p>
 								</div>
 							</div>
 						</div>
