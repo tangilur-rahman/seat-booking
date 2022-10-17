@@ -219,7 +219,7 @@ const BookingPopUp = ({
 				data-aos-duration="700"
 			>
 				<div
-					className="col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
+					className="col-xl-6 col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
 					ref={myRef}
 				>
 					<h3>Seat Booked</h3>

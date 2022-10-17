@@ -5,6 +5,7 @@ import { useState } from "react";
 import Basement from "../Basement/Basement";
 import BoysLab1 from "../BoysLab1/BoysLab1";
 import BoysLab2 from "../BoysLab2/BoysLab2";
+import GirlsLab1 from "../GirlsLab1/GirlsLab1";
 import GirlsLab2 from "../GirlsLab2/GirlsLab2";
 import "./Home.css";
 
@@ -111,6 +112,11 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
+
+					{selectedLab === "ridhima-girls-lab-1" && (
+						<GirlsLab1 setSelectedLab={setSelectedLab} />
+					)}
+
 					{selectedLab === "ridhima-girls-lab-2" && (
 						<GirlsLab2 setSelectedLab={setSelectedLab} />
 					)}
