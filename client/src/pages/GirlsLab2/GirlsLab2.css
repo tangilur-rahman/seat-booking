@@ -108,10 +108,12 @@
 	position: absolute;
 	transform: rotate(90deg);
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	top: 47%;
+	left: -7%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .girls-2-wrapper #layout-1 #count-section p {
@@ -171,10 +173,12 @@
 	position: absolute;
 	transform: rotate(90deg);
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	top: 47%;
+	left: -7%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .girls-2-wrapper #layout-2 #count-section p {
@@ -240,10 +244,12 @@
 	position: absolute;
 	transform: rotate(90deg);
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	top: 47%;
+	left: -7%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .girls-2-wrapper #layout-3 #count-section p {
@@ -309,10 +315,12 @@
 	position: absolute;
 	transform: rotate(90deg);
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	top: 47%;
+	left: -20%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .girls-2-wrapper #layout-4 #count-section p {
@@ -426,10 +434,12 @@
 	position: absolute;
 	transform: rotate(90deg);
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	top: 47%;
+	left: -20%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .girls-2-wrapper #layout-6 #count-section p {

@@ -329,7 +329,7 @@ const BoysLab1 = ({ setSelectedLab }) => {
 									</p>
 									<p>
 										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
-										<h6>{18 - boysLab_1L_1.length}</h6>
+										<h6>{21 - boysLab_1L_1.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -467,7 +467,7 @@ const BoysLab1 = ({ setSelectedLab }) => {
 									</p>
 									<p>
 										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
-										<h6>{18 - boysLab_1L_2.length}</h6>
+										<h6>{22 - boysLab_1L_2.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -603,7 +603,7 @@ const BoysLab1 = ({ setSelectedLab }) => {
 									</p>
 									<p>
 										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
-										<h6>{18 - boysLab_1L_3.length}</h6>
+										<h6>{22 - boysLab_1L_3.length}</h6>
 									</p>
 								</div>
 							</div>
@@ -738,7 +738,7 @@ const BoysLab1 = ({ setSelectedLab }) => {
 									</p>
 									<p>
 										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
-										<h6>{18 - boysLab_1L_4.length}</h6>
+										<h6>{23 - boysLab_1L_4.length}</h6>
 									</p>
 								</div>
 							</div>
