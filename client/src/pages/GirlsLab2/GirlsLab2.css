@@ -104,6 +104,12 @@
 	height: 86%;
 }
 
+.girls-2-wrapper #layout-1 #count-section {
+	position: absolute;
+	top: 50%;
+	left: 33%;
+}
+
 .girls-2-wrapper #layout-1 #top {
 	display: flex;
 	justify-content: space-evenly;
@@ -140,6 +146,12 @@
 	flex-direction: column;
 	flex-grow: 1;
 	position: relative;
+}
+
+.girls-2-wrapper #layout-2 #count-section {
+	position: absolute;
+	top: 50%;
+	left: 33%;
 }
 
 .girls-2-wrapper #layout-2::after {
@@ -186,6 +198,12 @@
 	position: relative;
 }
 
+.girls-2-wrapper #layout-3 #count-section {
+	position: absolute;
+	top: 50%;
+	left: 33%;
+}
+
 .girls-2-wrapper #layout-3::after {
 	content: "";
 	position: absolute;
@@ -228,6 +246,12 @@
 	flex-direction: column;
 	flex-grow: 1;
 	position: relative;
+}
+
+.girls-2-wrapper #layout-4 #count-section {
+	position: absolute;
+	top: 20%;
+	right: -16%;
 }
 
 .girls-2-wrapper #layout-4::after {
@@ -273,6 +297,12 @@
 	flex-direction: column;
 	flex-grow: 1;
 	position: relative;
+}
+
+.girls-2-wrapper #layout-5 #count-section {
+	position: absolute;
+	top: 20%;
+	right: -16%;
 }
 
 .girls-2-wrapper #layout-5::after {

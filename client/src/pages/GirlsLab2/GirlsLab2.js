@@ -47,6 +47,88 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 	}, [isUpdate]);
 	// fetching data from database end
 
+	// for counting booking seat & empty seat start
+	const [girlsLab_2L_1, setGirlsLab_2L_1] = useState([]);
+	const [girlsLab_2L_2, setGirlsLab_2L_2] = useState([]);
+	const [girlsLab_2L_3, setGirlsLab_2L_3] = useState([]);
+	const [girlsLab_2L_4, setGirlsLab_2L_4] = useState([]);
+	const [girlsLab_2L_5, setGirlsLab_2L_5] = useState([]);
+
+	useEffect(() => {
+		if (getDocs) {
+			setGirlsLab_2L_1(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(0, 18)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_2L_2(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(18, 18)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_2L_3(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(36, 18)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_2L_4(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(54, 16)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_2L_5(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(70, 14)
+					.filter((result) => result === true)
+			);
+		}
+	}, [getDocs]);
+	// for counting booking seat & empty seat end
+
 	return (
 		<>
 			{getDocs.length > 0 && (
@@ -251,6 +333,15 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											.splice(11, 7)}
 									</div>
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked : <b>{girlsLab_2L_1.length}</b>{" "}
+									</p>
+									<p>
+										Empty : <b>{18 - girlsLab_2L_1.length}</b>{" "}
+									</p>
+								</div>
 							</div>
 
 							<div id="layout-2">
@@ -444,6 +535,15 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											.splice(29, 7)}
 									</div>
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked : <b>{girlsLab_2L_2.length}</b>{" "}
+									</p>
+									<p>
+										Empty : <b>{18 - girlsLab_2L_2.length}</b>{" "}
+									</p>
+								</div>
 							</div>
 
 							<div id="layout-3">
@@ -636,6 +736,15 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											})
 											.splice(47, 7)}
 									</div>
+								</div>
+
+								<div id="count-section">
+									<p>
+										Booked : <b>{girlsLab_2L_3.length}</b>{" "}
+									</p>
+									<p>
+										Empty : <b>{18 - girlsLab_2L_3.length}</b>{" "}
+									</p>
 								</div>
 							</div>
 
@@ -834,6 +943,15 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											.splice(60, 5)}
 									</div>
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked : <b>{girlsLab_2L_4.length}</b>{" "}
+									</p>
+									<p>
+										Empty : <b>{16 - girlsLab_2L_4.length}</b>{" "}
+									</p>
+								</div>
 							</div>
 
 							<div id="layout-5">
@@ -973,6 +1091,15 @@ const GirlsLab2 = ({ setSelectedLab }) => {
 											})
 											.splice(70, 5)}
 									</div>
+								</div>
+
+								<div id="count-section">
+									<p>
+										Booked : <b>{girlsLab_2L_5.length}</b>{" "}
+									</p>
+									<p>
+										Empty : <b>{14 - girlsLab_2L_5.length}</b>{" "}
+									</p>
 								</div>
 							</div>
 
