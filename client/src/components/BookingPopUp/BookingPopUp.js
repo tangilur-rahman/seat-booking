@@ -211,7 +211,7 @@ const BookingPopUp = ({
 
 						{!getBooked && (
 							<div className="upload">
-								<p>Upload a image</p>
+								<p>Upload a profile image</p>
 							</div>
 						)}
 
@@ -232,7 +232,7 @@ const BookingPopUp = ({
 									className="btn btn-success"
 									onClick={submitHandler}
 								>
-									{!isLoading ? (
+									{isLoading ? (
 										<i className="fa-solid fa-fan fa-spin"></i>
 									) : (
 										<span className="hover-link">Submit</span>

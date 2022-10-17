@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	top: 13vh;
+	top: 10vh;
 }
 
 .booking-popup-container .booking-popup-wrapper {
@@ -91,6 +91,25 @@
 .booking-popup-container .input-field .displaying p {
 	margin: 0 0 0 10px;
 }
+
+/* upload-image section style start  */
+.input-fields-container .upload {
+	border: 1px solid red;
+	width: 95%;
+	height: 40px;
+	margin: 7px 0 20px;
+	border-radius: 10px;
+	border: 2px dashed #2a9d8f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-fields-container .upload p {
+	margin: 0;
+	color: #2a9d8f;
+}
+/* upload-image section style end */
 
 .input-fields-container .input-field input {
 	width: 100%;
