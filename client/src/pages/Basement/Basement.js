@@ -258,6 +258,10 @@ const Basement = ({ setSelectedLab }) => {
 									</div>
 								</div>
 
+								<div id="middle">
+									<p>Entry / Exit</p>
+								</div>
+
 								<div id="right">
 									<div id="right-inside-box">
 										<div id="right-left">

@@ -150,6 +150,12 @@
 	padding-top: 10px;
 }
 
+.basement-wrapper #top #middle {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+}
+
 .basement-wrapper #top #right {
 	display: flex;
 	flex-direction: column;
