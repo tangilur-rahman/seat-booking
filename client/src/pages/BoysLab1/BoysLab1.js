@@ -114,11 +114,6 @@ const BoysLab1 = ({ setSelectedLab }) => {
 	}, [getDocs]);
 	// for counting booking seat & empty seat end
 
-	console.log(boysLab_1L_1);
-	console.log(boysLab_1L_2);
-	console.log(boysLab_1L_3);
-	console.log(boysLab_1L_4);
-
 	return (
 		<>
 			{getDocs.length > 0 && (
