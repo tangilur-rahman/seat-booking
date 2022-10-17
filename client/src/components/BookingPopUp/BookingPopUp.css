@@ -115,8 +115,21 @@
 	border-radius: 30px;
 	font-weight: 500;
 	font-size: 18px;
+	transition: all 0.3s;
 }
 
 .input-fields-container .btn-container button:first-child {
 	margin-right: 20px;
+}
+
+.input-fields-container .btn-container button:hover {
+	transform: scale(0.97);
+}
+
+.input-fields-container .btn-container button:active {
+	transform: scale(1.05);
+}
+
+.input-fields-container .btn-container button i {
+	font-size: 21px;
 }

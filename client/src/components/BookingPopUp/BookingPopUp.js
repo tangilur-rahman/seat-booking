@@ -29,6 +29,9 @@ const BookingPopUp = ({
 	}, []);
 	// for closing booking-popup when clicked outside end
 
+	// for loading until not submitting on server
+	const [isLoading, setIsLoading] = useState(false);
+
 	// for getting input-fields values
 	const [getSName, setSName] = useState("");
 	const [getSNum, setSNum] = useState("");
@@ -52,6 +55,7 @@ const BookingPopUp = ({
 			// addition days end
 
 			try {
+				setIsLoading(true);
 				const userObject = {
 					getSName,
 					getSNum,
@@ -84,12 +88,15 @@ const BookingPopUp = ({
 					setGNum("");
 					setDay("");
 					setIsUpdate(Date.now());
+					setIsLoading(false);
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
 						theme: "dark",
 						autoClose: 3000
 					});
+
+					setIsLoading(false);
 				}
 			} catch (error) {
 				toast.error(error.message, {
@@ -97,6 +104,7 @@ const BookingPopUp = ({
 					theme: "colored",
 					autoClose: 3000
 				});
+				setIsLoading(false);
 			}
 		} else {
 			toast("Please fill-up all fields!", {
@@ -104,6 +112,7 @@ const BookingPopUp = ({
 				theme: "dark",
 				autoClose: 3000
 			});
+			setIsLoading(false);
 		}
 	};
 	// submit handler end
@@ -216,14 +225,18 @@ const BookingPopUp = ({
 										setBooked("");
 									}}
 								>
-									Cancel
+									<span className="hover-link">Cancel</span>
 								</button>
 								<button
 									type="button"
 									className="btn btn-success"
 									onClick={submitHandler}
 								>
-									Submit
+									{!isLoading ? (
+										<i className="fa-solid fa-fan fa-spin"></i>
+									) : (
+										<span className="hover-link">Submit</span>
+									)}
 								</button>
 							</div>
 						)}

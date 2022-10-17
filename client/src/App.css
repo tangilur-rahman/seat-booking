@@ -36,6 +36,10 @@ body {
 /* Scrollbar styling end */
 
 /* for hover link start  */
+.hover-link {
+	display: inline-block;
+}
+
 .hover-link::after {
 	content: "";
 	display: block;
