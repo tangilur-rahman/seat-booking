@@ -52,8 +52,8 @@
 
 .boys-2-container .boys-2-wrapper span {
 	display: inline-block;
-	width: 36px;
-	height: 36px;
+	width: 33px;
+	height: 33px;
 	background-color: #0ead69;
 	display: flex;
 	justify-content: center;
@@ -94,6 +94,33 @@
 	flex-grow: 1;
 	position: relative;
 }
+
+/* count style start  */
+.boys-2-wrapper #layout-1 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-2-wrapper #layout-1 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-2-wrapper #layout-1 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-1 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* count style end */
 
 .boys-2-wrapper #layout-1::after {
 	content: "";
@@ -153,6 +180,33 @@
 	flex-grow: 1;
 	position: relative;
 }
+
+/* count style start  */
+.boys-2-wrapper #layout-2 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-2-wrapper #layout-2 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-2-wrapper #layout-2 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-2 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* count style end */
 
 .boys-2-wrapper #layout-2::after {
 	content: "";
@@ -216,6 +270,33 @@
 	position: relative;
 }
 
+/* count style start  */
+.boys-2-wrapper #layout-3 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-2-wrapper #layout-3 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-2-wrapper #layout-3 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-3 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* count style end */
+
 .boys-2-wrapper #layout-3::after {
 	content: "";
 	position: absolute;
@@ -278,6 +359,33 @@
 	position: relative;
 }
 
+/* count style start  */
+.boys-2-wrapper #layout-4 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-2-wrapper #layout-4 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-2-wrapper #layout-4 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-4 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* count style end */
+
 .boys-2-wrapper #layout-4::after {
 	content: "";
 	position: absolute;
@@ -338,6 +446,33 @@
 	flex-grow: 1;
 	position: relative;
 }
+
+/* count style start  */
+.boys-2-wrapper #layout-5 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 150px);
+	height: 100%;
+}
+
+.boys-2-wrapper #layout-5 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-2-wrapper #layout-5 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-5 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* count style end */
 
 .boys-2-wrapper #layout-5 #top {
 	display: flex;

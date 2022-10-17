@@ -47,6 +47,88 @@ const BoysLab2 = ({ setSelectedLab }) => {
 	}, [isUpdate]);
 	// fetching data from database end
 
+	// for counting booking seat & empty seat start
+	const [boysLab_2L_1, setBoysLab_2L_1] = useState([]);
+	const [boysLab_2L_2, setBoysLab_2L_2] = useState([]);
+	const [boysLab_2L_3, setBoysLab_2L_3] = useState([]);
+	const [boysLab_2L_4, setBoysLab_2L_4] = useState([]);
+	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
+
+	useEffect(() => {
+		if (getDocs) {
+			setBoysLab_2L_1(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(0, 25)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_2L_2(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(25, 20)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_2L_3(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(45, 22)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_2L_4(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(67, 22)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_2L_5(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(89, 28)
+					.filter((result) => result === true)
+			);
+		}
+	}, [getDocs]);
+	// for counting booking seat & empty seat end
+
 	return (
 		<>
 			{getDocs.length > 0 && (
@@ -315,6 +397,15 @@ const BoysLab2 = ({ setSelectedLab }) => {
 										})
 										.splice(21, 4)}
 								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_2L_1.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{25 - boysLab_2L_1.length}</h6>
+									</p>
+								</div>
 							</div>
 							{/* layout-1 end  */}
 
@@ -574,6 +665,15 @@ const BoysLab2 = ({ setSelectedLab }) => {
 											);
 										})
 										.splice(42, 3)}
+								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_2L_2.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{20 - boysLab_2L_2.length}</h6>
+									</p>
 								</div>
 							</div>
 							{/* layout-2 end  */}
@@ -835,6 +935,16 @@ const BoysLab2 = ({ setSelectedLab }) => {
 										})
 										.splice(63, 4)}
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_2L_3.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{22 - boysLab_2L_3.length}</h6>
+									</p>
+								</div>
 							</div>
 							{/* layout-3 end  */}
 
@@ -1095,6 +1205,15 @@ const BoysLab2 = ({ setSelectedLab }) => {
 										})
 										.splice(85, 4)}
 								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_2L_4.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{22 - boysLab_2L_4.length}</h6>
+									</p>
+								</div>
 							</div>
 							{/* layout-4 end  */}
 
@@ -1354,6 +1473,15 @@ const BoysLab2 = ({ setSelectedLab }) => {
 											);
 										})
 										.splice(110, 7)}
+								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_2L_5.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{28 - boysLab_2L_5.length}</h6>
+									</p>
 								</div>
 							</div>
 							{/* layout-5 end  */}
