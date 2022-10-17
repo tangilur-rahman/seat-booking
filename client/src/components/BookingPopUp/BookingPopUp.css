@@ -65,6 +65,11 @@
 	transform: rotate(180deg);
 }
 
+.booking-popup-wrapper .input-fields-wrapper {
+	display: flex;
+	width: 100%;
+}
+
 .booking-popup-wrapper .input-fields-container {
 	display: flex;
 	flex-direction: column;
@@ -72,6 +77,28 @@
 	width: 95%;
 	margin-bottom: 10px;
 }
+
+.booking-popup-wrapper .input-fields-container#when-img {
+	align-items: flex-start;
+	width: 50%;
+}
+
+/* displaying-img style start  */
+.input-fields-wrapper #displaying-img {
+	width: 50%;
+	display: flex;
+	margin-top: 10px;
+	padding-right: 20px;
+}
+
+.input-fields-wrapper #displaying-img img {
+	width: 100%;
+	height: fit-content;
+	object-fit: contain;
+	outline: 2.5px solid black;
+	border-radius: 10px;
+}
+/* displaying-img style end */
 
 .booking-popup-wrapper .input-fields-container .input-field {
 	width: 95%;
@@ -84,12 +111,20 @@
 	align-items: center;
 }
 
+.booking-popup-container .input-field .displaying#have-img {
+	width: 60%;
+}
+
 .booking-popup-container .input-field .displaying h6 {
 	margin: 0;
 }
 
 .booking-popup-container .input-field .displaying p {
 	margin: 0 0 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-grow: 1;
 }
 
 .input-fields-container .input-field input {

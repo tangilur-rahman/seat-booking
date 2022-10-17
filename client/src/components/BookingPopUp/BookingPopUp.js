@@ -219,133 +219,152 @@ const BookingPopUp = ({
 				data-aos-duration="700"
 			>
 				<div
-					className="col-xl-6 col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
+					className="col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
 					ref={myRef}
 				>
-					<h3>Seat Booking</h3>
-					<div className="input-fields-container">
-						<div className="input-field">
-							{getBooked ? (
-								<div className="displaying">
-									<h6>Student Name : </h6> <p>{getBooked.student_name}</p>
-								</div>
-							) : (
-								<input
-									placeholder="Student Name . . ."
-									required
-									onChange={(e) => setSName(e.target.value)}
-								/>
-							)}
-						</div>
+					<h3>Seat Booked</h3>
 
-						<div className="input-field">
-							{getBooked ? (
-								<div className="displaying">
-									<h6>Student Number : </h6> <p>{getBooked.student_number}</p>
-								</div>
-							) : (
-								<input
-									type="number"
-									placeholder="Student Number . . ."
-									required
-									onChange={(e) => setSNum(e.target.value)}
-								/>
-							)}
-						</div>
+					<div className="input-fields-wrapper">
+						<div
+							className="input-fields-container"
+							id={getBooked.profile_img ? "have-img" : ""}
+						>
+							<div className="input-field">
+								{getBooked ? (
+									<div className="displaying">
+										<h6>Student Name : </h6> <p>{getBooked.student_name}</p>
+									</div>
+								) : (
+									<input
+										placeholder="Student Name . . ."
+										required
+										onChange={(e) => setSName(e.target.value)}
+									/>
+								)}
+							</div>
 
-						<div className="input-field">
-							{getBooked ? (
-								<div className="displaying">
-									<h6>Guardian Name : </h6> <p>{getBooked.guardian_name}</p>
-								</div>
-							) : (
-								<input
-									placeholder="Guardian Name . . ."
-									required
-									onChange={(e) => setGName(e.target.value)}
-								/>
-							)}
-						</div>
+							<div className="input-field">
+								{getBooked ? (
+									<div className="displaying">
+										<h6>Student Number : </h6> <p>{getBooked.student_number}</p>
+									</div>
+								) : (
+									<input
+										type="number"
+										placeholder="Student Number . . ."
+										required
+										onChange={(e) => setSNum(e.target.value)}
+									/>
+								)}
+							</div>
 
-						<div className="input-field">
-							{getBooked ? (
-								<div className="displaying">
-									<h6>Guardian Number : </h6> <p>{getBooked.guardian_number}</p>
-								</div>
-							) : (
-								<input
-									type="number"
-									placeholder="Guardian Number . . ."
-									required
-									onChange={(e) => setGNum(e.target.value)}
-								/>
-							)}
-						</div>
+							<div className="input-field">
+								{getBooked ? (
+									<div className="displaying">
+										<h6>Guardian Name : </h6> <p>{getBooked.guardian_name}</p>
+									</div>
+								) : (
+									<input
+										placeholder="Guardian Name . . ."
+										required
+										onChange={(e) => setGName(e.target.value)}
+									/>
+								)}
+							</div>
 
-						<div className="input-field">
-							{getBooked ? (
-								<div className="displaying">
-									<h6>Days Left : </h6>
-									<p>
-										{Math.abs(
-											Math.floor(getBooked.days_left / (3600 * 24 * 1000)) -
-												Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							<div className="input-field">
+								{getBooked ? (
+									<div className="displaying">
+										<h6>Guardian Number : </h6>{" "}
+										<p>{getBooked.guardian_number}</p>
+									</div>
+								) : (
+									<input
+										type="number"
+										placeholder="Guardian Number . . ."
+										required
+										onChange={(e) => setGNum(e.target.value)}
+									/>
+								)}
+							</div>
+
+							<div className="input-field">
+								{getBooked ? (
+									<div className="displaying">
+										<h6>Days Left : </h6>
+										<p>
+											{Math.abs(
+												Math.floor(getBooked.days_left / (3600 * 24 * 1000)) -
+													Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+											)}
+										</p>
+									</div>
+								) : (
+									<input
+										type="number"
+										placeholder="Days left . . ."
+										required
+										onChange={(e) => setDay(e.target.value)}
+									/>
+								)}
+							</div>
+
+							{!getBooked && (
+								<label htmlFor="for-image">
+									<div className="upload" id={getPreview ? "preview" : ""}>
+										{getPreview ? (
+											<div id="display-preview">
+												<img src={getPreview} alt="profile-img" />
+												<h5>{getImage.name}</h5>
+											</div>
+										) : (
+											<p>Upload a profile image</p>
 										)}
-									</p>
+									</div>
+								</label>
+							)}
+
+							{!getBooked && (
+								<div className="btn-container">
+									<button
+										type="button"
+										className="btn btn-dark"
+										onClick={() => {
+											setId("");
+											setBooked("");
+											setPreview("");
+											setImage("");
+										}}
+									>
+										<span className="hover-link">Cancel</span>
+									</button>
+									<button
+										type="button"
+										className="btn btn-success"
+										onClick={
+											getPreview ? submitHandlerWithImage : submitHandler
+										}
+									>
+										{isLoading ? (
+											<i className="fa-solid fa-fan fa-spin"></i>
+										) : (
+											<span className="hover-link">Submit</span>
+										)}
+									</button>
 								</div>
-							) : (
-								<input
-									type="number"
-									placeholder="Days left . . ."
-									required
-									onChange={(e) => setDay(e.target.value)}
-								/>
 							)}
 						</div>
 
-						{!getBooked && (
-							<label htmlFor="for-image">
-								<div className="upload" id={getPreview ? "preview" : ""}>
-									{getPreview ? (
-										<div id="display-preview">
-											<img src={getPreview} alt="profile-img" />
-											<h5>{getImage.name}</h5>
-										</div>
-									) : (
-										<p>Upload a profile image</p>
-									)}
-								</div>
-							</label>
-						)}
-
-						{!getBooked && (
-							<div className="btn-container">
-								<button
-									type="button"
-									className="btn btn-dark"
-									onClick={() => {
-										setId("");
-										setBooked("");
-										setPreview("");
-										setImage("");
-									}}
-								>
-									<span className="hover-link">Cancel</span>
-								</button>
-								<button
-									type="button"
-									className="btn btn-success"
-									onClick={getPreview ? submitHandlerWithImage : submitHandler}
-								>
-									{isLoading ? (
-										<i className="fa-solid fa-fan fa-spin"></i>
-									) : (
-										<span className="hover-link">Submit</span>
-									)}
-								</button>
+						{getBooked.profile_img && (
+							<div id="displaying-img">
+								<img
+									src={`/uploads/profile-img/${getBooked.profile_img}`}
+									alt="profile-img"
+								/>
 							</div>
 						)}
 					</div>
+
 					<div
 						className="close-btn"
 						onClick={() => {
