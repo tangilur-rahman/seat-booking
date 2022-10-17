@@ -47,6 +47,78 @@ const BoysLab1 = ({ setSelectedLab }) => {
 	}, [isUpdate]);
 	// fetching data from database end
 
+	// for counting booking seat & empty seat start
+	const [boysLab_1L_1, setBoysLab_1L_1] = useState([]);
+	const [boysLab_1L_2, setBoysLab_1L_2] = useState([]);
+	const [boysLab_1L_3, setBoysLab_1L_3] = useState([]);
+	const [boysLab_1L_4, setBoysLab_1L_4] = useState([]);
+
+	useEffect(() => {
+		if (getDocs) {
+			setBoysLab_1L_1(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(0, 21)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_1L_2(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(21, 22)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_1L_3(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(43, 22)
+					.filter((result) => result === true)
+			);
+
+			setBoysLab_1L_4(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(65, 23)
+					.filter((result) => result === true)
+			);
+		}
+	}, [getDocs]);
+	// for counting booking seat & empty seat end
+
+	console.log(boysLab_1L_1);
+	console.log(boysLab_1L_2);
+	console.log(boysLab_1L_3);
+	console.log(boysLab_1L_4);
+
 	return (
 		<>
 			{getDocs.length > 0 && (
@@ -255,6 +327,16 @@ const BoysLab1 = ({ setSelectedLab }) => {
 								<div className="exit-message">
 									<p>Entry / Exit</p>
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_1L_1.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - boysLab_1L_1.length}</h6>
+									</p>
+								</div>
 							</div>
 
 							<div id="layout-2">
@@ -383,6 +465,16 @@ const BoysLab1 = ({ setSelectedLab }) => {
 										})
 										.splice(32, 11)}
 								</div>
+
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_1L_2.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - boysLab_1L_2.length}</h6>
+									</p>
+								</div>
 							</div>
 							<div id="layout-3">
 								<div id="left">
@@ -510,6 +602,15 @@ const BoysLab1 = ({ setSelectedLab }) => {
 										})
 										.splice(54, 11)}
 								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_1L_3.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - boysLab_1L_3.length}</h6>
+									</p>
+								</div>
 							</div>
 							<div id="layout-4">
 								<div id="left">
@@ -635,6 +736,15 @@ const BoysLab1 = ({ setSelectedLab }) => {
 											);
 										})
 										.splice(76, 12)}
+								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{boysLab_1L_4.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{18 - boysLab_1L_4.length}</h6>
+									</p>
 								</div>
 							</div>
 						</div>

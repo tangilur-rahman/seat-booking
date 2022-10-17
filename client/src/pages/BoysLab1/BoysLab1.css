@@ -105,6 +105,33 @@
 	height: 91%;
 }
 
+/* for count style start  */
+.boys-1-wrapper #layout-1 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-1-wrapper #layout-1 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-1 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-1 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
 .boys-1-wrapper #layout-1 .exit-message {
 	position: absolute;
 	left: 13%;
@@ -161,6 +188,33 @@
 	height: 91%;
 }
 
+/* for count style start  */
+.boys-1-wrapper #layout-2 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-1-wrapper #layout-2 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-2 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-2 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
 .boys-1-wrapper #layout-2 #left {
 	display: flex;
 	flex-direction: column;
@@ -191,6 +245,33 @@
 	height: 91%;
 }
 
+/* for count style start  */
+.boys-1-wrapper #layout-3 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-1-wrapper #layout-3 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-3 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-3 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
 .boys-1-wrapper #layout-3 #left {
 	display: flex;
 	flex-direction: column;
@@ -208,7 +289,35 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
+	position: relative;
 }
+
+/* for count style start  */
+.boys-1-wrapper #layout-4 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(100% - 40px);
+	height: 100%;
+}
+
+.boys-1-wrapper #layout-4 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-4 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-4 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .boys-1-wrapper #layout-4 #left {
 	display: flex;
