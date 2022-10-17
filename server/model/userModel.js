@@ -32,7 +32,12 @@ const schema = mongoose.Schema(
 			trim: true
 		},
 
-		frow_where: { type: String, trim: true }
+		frow_where: { type: String, trim: true },
+
+		profile_img: {
+			type: String,
+			trim: true
+		}
 	},
 	{ timestamps: true }
 );

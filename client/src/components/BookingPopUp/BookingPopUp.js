@@ -20,6 +20,8 @@ const BookingPopUp = ({
 		if (!myRef.current?.contains(e.target)) {
 			setId("");
 			setBooked("");
+			setPreview("");
+			setImage("");
 		}
 	};
 	useEffect(() => {
@@ -40,6 +42,10 @@ const BookingPopUp = ({
 	const [getGNum, setGNum] = useState("");
 
 	const [getDay, setDay] = useState("");
+
+	// for getting img
+	const [getImage, setImage] = useState("");
+	const [getPreview, setPreview] = useState("");
 
 	// submit handler start
 	const submitHandler = async () => {
@@ -115,7 +121,95 @@ const BookingPopUp = ({
 			setIsLoading(false);
 		}
 	};
+
+	const submitHandlerWithImage = async () => {
+		if (getSName && getSNum && getGName && getGNum && getDay) {
+			// addition days start
+			function addDays(theDate, days) {
+				return new Date(
+					theDate.getTime() + days * 24 * 60 * 60 * 1000
+				).getTime();
+			}
+
+			const newDate = addDays(new Date(), getDay);
+			// addition days end
+
+			try {
+				setIsLoading(true);
+
+				const formData = new FormData();
+
+				formData.append("image", getImage);
+				formData.append("getSName", getSName);
+				formData.append("getSNum", getSNum);
+				formData.append("getGName", getGName);
+				formData.append("getGNum", getGNum);
+				formData.append("newDate", newDate);
+				formData.append("getId", getId);
+				formData.append("frow_where", frow_where);
+
+				const response = await fetch("/user/submit/with-img", {
+					method: "POST",
+					body: formData
+				});
+
+				const result = await response.json();
+
+				if (response.status === 200) {
+					toast.success(result.message, {
+						position: "top-right",
+						theme: "colored",
+						autoClose: 2000
+					});
+
+					setId("");
+					setSName("");
+					setSNum("");
+					setGName("");
+					setGNum("");
+					setDay("");
+					setIsUpdate(Date.now());
+					setIsLoading(false);
+				} else if (response.status === 400) {
+					toast(result.error, {
+						position: "top-right",
+						theme: "dark",
+						autoClose: 3000
+					});
+
+					setIsLoading(false);
+				}
+			} catch (error) {
+				toast.error(error.message, {
+					position: "top-right",
+					theme: "colored",
+					autoClose: 3000
+				});
+				setIsLoading(false);
+			}
+		} else {
+			toast("Please fill-up all fields!", {
+				position: "top-right",
+				theme: "dark",
+				autoClose: 3000
+			});
+			setIsLoading(false);
+		}
+	};
 	// submit handler end
+
+	// for preview image start
+	const imgHandler = (event) => {
+		setImage(event.target.files[0]);
+		const reader = new FileReader();
+		reader.onload = () => {
+			if (reader.readyState === 2) {
+				setPreview(reader.result);
+			}
+		};
+		reader.readAsDataURL(event.target.files[0]);
+	};
+	// for preview image end
 
 	return (
 		<>
@@ -210,9 +304,18 @@ const BookingPopUp = ({
 						</div>
 
 						{!getBooked && (
-							<div className="upload">
-								<p>Upload a profile image</p>
-							</div>
+							<label htmlFor="for-image">
+								<div className="upload" id={getPreview ? "preview" : ""}>
+									{getPreview ? (
+										<div id="display-preview">
+											<img src={getPreview} alt="profile-img" />
+											<h5>{getImage.name}</h5>
+										</div>
+									) : (
+										<p>Upload a profile image</p>
+									)}
+								</div>
+							</label>
 						)}
 
 						{!getBooked && (
@@ -223,6 +326,8 @@ const BookingPopUp = ({
 									onClick={() => {
 										setId("");
 										setBooked("");
+										setPreview("");
+										setImage("");
 									}}
 								>
 									<span className="hover-link">Cancel</span>
@@ -230,7 +335,7 @@ const BookingPopUp = ({
 								<button
 									type="button"
 									className="btn btn-success"
-									onClick={submitHandler}
+									onClick={getPreview ? submitHandlerWithImage : submitHandler}
 								>
 									{isLoading ? (
 										<i className="fa-solid fa-fan fa-spin"></i>
@@ -246,6 +351,8 @@ const BookingPopUp = ({
 						onClick={() => {
 							setBooked("");
 							setId("");
+							setPreview("");
+							setImage("");
 						}}
 					>
 						<i className="fa-solid fa-x"></i>
@@ -254,10 +361,9 @@ const BookingPopUp = ({
 
 				<input
 					type="file"
-					name="profile-img"
-					id="change-img"
+					id="for-image"
 					accept="image/png, image/gif, image/jpeg, image/jpg"
-					// onChange={""}
+					onChange={imgHandler}
 					style={{ display: "none" }}
 				/>
 			</div>

@@ -3,7 +3,9 @@ const user = require("express").Router();
 
 // internal modules
 const userModel = require("./../model/userModel");
+const multerForImg = require("./../Config/multerManager");
 
+// for getting all seats
 user.get("/allDocs", async (req, res) => {
 	try {
 		const documents = await userModel.find({ frow_where: req.query.lab });
@@ -18,6 +20,7 @@ user.get("/allDocs", async (req, res) => {
 	}
 });
 
+// for updating seat information without image
 user.post("/submit", async (req, res) => {
 	try {
 		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
@@ -47,6 +50,35 @@ user.post("/submit", async (req, res) => {
 					guardian_number: getGNum,
 					days_left: newDate,
 					frow_where
+				}
+			}
+		);
+
+		res.status(200).json({ message: "Submit successfully." });
+	} catch (error) {
+		res.status(500).json({ error: "Maintaining mode, Try again latter!" });
+	}
+});
+
+// for updating seat information with image
+const upload = multerForImg("image");
+
+user.post("/submit/with-img", upload.single("image"), async (req, res) => {
+	try {
+		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
+			req.body;
+
+		await userModel.updateOne(
+			{ _id: getId },
+			{
+				$set: {
+					student_name: getSName,
+					student_number: getSNum,
+					guardian_name: getGName,
+					guardian_number: getGNum,
+					days_left: newDate,
+					frow_where,
+					profile_img: req.file.filename
 				}
 			}
 		);
