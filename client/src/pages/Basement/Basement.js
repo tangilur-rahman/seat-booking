@@ -47,6 +47,73 @@ const Basement = ({ setSelectedLab }) => {
 	}, [isUpdate]);
 	// fetching data from database end
 
+	// for counting booking seat & empty seat start
+	const [basementL_1, setBasementL_1] = useState([]);
+	const [basementL_2, setBasementL_2] = useState([]);
+	const [basementL_3, setBasementL_3] = useState([]);
+	const [basementL_4, setBasementL_4] = useState([]);
+
+	useEffect(() => {
+		if (getDocs) {
+			setBasementL_1(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(0, 25)
+					.filter((result) => result === true)
+			);
+
+			setBasementL_2(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(25, 22)
+					.filter((result) => result === true)
+			);
+
+			setBasementL_3(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(47, 21)
+					.filter((result) => result === true)
+			);
+
+			setBasementL_4(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(68, 23)
+					.filter((result) => result === true)
+			);
+		}
+	}, [getDocs]);
+	// for counting booking seat & empty seat end
+
 	return (
 		<>
 			{getDocs.length > 0 && (
@@ -191,6 +258,16 @@ const Basement = ({ setSelectedLab }) => {
 												.splice(6, 6)}
 											<span className="visibility-none"></span>
 										</div>
+										<div id="count-section">
+											<p>
+												Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<h6>{basementL_1.length}</h6>
+											</p>
+											<p>
+												Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<h6>{25 - basementL_1.length}</h6>
+											</p>
+										</div>
 									</div>
 									<div id="outside-box">
 										{getDocs
@@ -327,7 +404,7 @@ const Basement = ({ setSelectedLab }) => {
 														</span>
 													);
 												})
-												.splice(74, 5)}
+												.splice(72, 5)}
 										</div>
 
 										<div id="body-container">
@@ -394,7 +471,7 @@ const Basement = ({ setSelectedLab }) => {
 															</span>
 														);
 													})
-													.splice(79, 6)}
+													.splice(77, 6)}
 											</div>
 											<div id="right-bottom">
 												{getDocs
@@ -459,8 +536,18 @@ const Basement = ({ setSelectedLab }) => {
 															</span>
 														);
 													})
-													.splice(85, 4)}
+													.splice(83, 4)}
 											</div>
+										</div>
+										<div id="count-section">
+											<p>
+												Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<h6>{basementL_4.length}</h6>
+											</p>
+											<p>
+												Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<h6>{23 - basementL_4.length}</h6>
+											</p>
 										</div>
 									</div>
 
@@ -528,7 +615,7 @@ const Basement = ({ setSelectedLab }) => {
 														</span>
 													);
 												})
-												.splice(89, 4)}
+												.splice(87, 4)}
 										</div>
 									</div>
 								</div>
@@ -800,7 +887,7 @@ const Basement = ({ setSelectedLab }) => {
 															</span>
 														);
 													})
-													.splice(70, 4)}
+													.splice(68, 4)}
 											</div>
 										</div>
 									</div>
@@ -935,7 +1022,7 @@ const Basement = ({ setSelectedLab }) => {
 														</span>
 													);
 												})
-												.splice(51, 10)}
+												.splice(51, 8)}
 										</div>
 									</div>
 								</div>
@@ -1004,6 +1091,7 @@ const Basement = ({ setSelectedLab }) => {
 											})
 											.splice(38, 9)}
 									</div>
+
 									<div id="section-2">
 										{getDocs
 											.map((value, index) => {
@@ -1066,9 +1154,28 @@ const Basement = ({ setSelectedLab }) => {
 													</span>
 												);
 											})
-											.splice(61, 9)}
+											.splice(59, 9)}
 									</div>
 								</div>
+							</div>
+							<div id="count-section-2">
+								<p>
+									Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{basementL_2.length}</h6>
+								</p>
+								<p>
+									Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+									<h6>{22 - basementL_2.length}</h6>
+								</p>
+							</div>
+
+							<div id="count-section-3">
+								<p>
+									Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{basementL_3.length}</h6>
+								</p>
+								<p>
+									Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+									<h6>{21 - basementL_3.length}</h6>
+								</p>
 							</div>
 						</div>
 						<div
