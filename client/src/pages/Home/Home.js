@@ -1,7 +1,9 @@
 // external components
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 // internal components
+import { GetContextApi } from "../../ContextApi";
 import Basement from "../Basement/Basement";
 import BoysLab1 from "../BoysLab1/BoysLab1";
 import BoysLab2 from "../BoysLab2/BoysLab2";
@@ -10,6 +12,9 @@ import GirlsLab2 from "../GirlsLab2/GirlsLab2";
 import "./Home.css";
 
 const Home = () => {
+	// for updating generate-report
+	const { updateReport } = GetContextApi();
+
 	// for getting option
 	const [getOption, setOption] = useState("seats");
 
@@ -49,6 +54,44 @@ const Home = () => {
 	const [boysLab_2L_3, setBoysLab_2L_3] = useState([]);
 	const [boysLab_2L_4, setBoysLab_2L_4] = useState([]);
 	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
+
+	// for getting those document which are updated today start
+	const [generateR, setGenerateR] = useState("");
+
+	useEffect(() => {
+		(async () => {
+			try {
+				const response = await fetch("/user/generate-report");
+
+				const result = await response.json();
+
+				if (response.status === 200) {
+					setGenerateR(result ? result : []);
+				} else if (response.status === 400) {
+					toast(result.error, {
+						position: "top-right",
+						theme: "dark",
+						autoClose: 3000
+					});
+				} else if (result.error) {
+					toast.error(result.message, {
+						position: "top-right",
+						theme: "colored",
+						autoClose: 3000
+					});
+				}
+			} catch (error) {
+				toast.error(error.message, {
+					position: "top-right",
+					theme: "colored",
+					autoClose: 3000
+				});
+			}
+		})();
+	}, [updateReport]);
+	// for getting those document which are updated today end
+
+	console.log(generateR);
 
 	return (
 		<>

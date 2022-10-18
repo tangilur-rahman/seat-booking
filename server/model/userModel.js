@@ -37,6 +37,11 @@ const schema = mongoose.Schema(
 		profile_img: {
 			type: String,
 			trim: true
+		},
+
+		date: {
+			type: String,
+			trim: true
 		}
 	},
 	{ timestamps: true }

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 
 // internal components
+import { GetContextApi } from "../../ContextApi";
 import "./BookingPopUp.css";
 
 const BookingPopUp = ({
@@ -13,6 +14,9 @@ const BookingPopUp = ({
 	getBooked,
 	setBooked
 }) => {
+	// for updating generate-report
+	const { setUpdateReport } = GetContextApi();
+
 	// for closing booking-popup when clicked outside start
 	const myRef = useRef();
 
@@ -95,6 +99,7 @@ const BookingPopUp = ({
 					setGNum("");
 					setDay("");
 					setIsUpdate(Date.now());
+					setUpdateReport(Date.now());
 					setIsLoading(false);
 				} else if (response.status === 400) {
 					toast(result.error, {
@@ -104,6 +109,12 @@ const BookingPopUp = ({
 					});
 
 					setIsLoading(false);
+				} else if (result.error) {
+					toast.error(result.message, {
+						position: "top-right",
+						theme: "colored",
+						autoClose: 3000
+					});
 				}
 			} catch (error) {
 				toast.error(error.message, {
@@ -171,6 +182,7 @@ const BookingPopUp = ({
 					setGNum("");
 					setDay("");
 					setIsUpdate(Date.now());
+					setUpdateReport(Date.now());
 					setIsLoading(false);
 				} else if (response.status === 400) {
 					toast(result.error, {
@@ -180,6 +192,12 @@ const BookingPopUp = ({
 					});
 
 					setIsLoading(false);
+				} else if (result.error) {
+					toast.error(result.message, {
+						position: "top-right",
+						theme: "colored",
+						autoClose: 3000
+					});
 				}
 			} catch (error) {
 				toast.error(error.message, {

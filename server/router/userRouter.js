@@ -78,7 +78,8 @@ user.post("/submit", async (req, res) => {
 					guardian_name: getGName,
 					guardian_number: getGNum,
 					days_left: newDate,
-					frow_where
+					frow_where,
+					date: new Date().toISOString().slice(0, 10)
 				}
 			}
 		);
@@ -135,12 +136,28 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 					guardian_number: getGNum,
 					days_left: newDate,
 					frow_where,
-					profile_img: req.file.filename
+					profile_img: req.file.filename,
+					date: new Date().toISOString().slice(0, 10)
 				}
 			}
 		);
 
 		res.status(200).json({ message: "Submit successfully." });
+	} catch (error) {
+		res.status(500).json({ error: "Maintaining mode, Try again latter!" });
+	}
+});
+
+// for getting today's generate-report
+user.get("/generate-report", async (req, res) => {
+	try {
+		const documents = await userModel.find({
+			date: new Date().toISOString().slice(0, 10)
+		});
+
+		if (documents) {
+			res.status(200).json(documents);
+		}
 	} catch (error) {
 		res.status(500).json({ error: "Maintaining mode, Try again latter!" });
 	}
