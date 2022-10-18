@@ -79,7 +79,7 @@ const Home = () => {
 					<div className="col-12 p-0 body-container">
 						<div className="header">
 							<h3>Seats Availability</h3>
-							<button type="button" className="btn btn-light">
+							<button type="button" className="btn btn-light hover-link">
 								Generate Report
 							</button>
 						</div>

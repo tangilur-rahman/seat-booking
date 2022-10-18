@@ -102,12 +102,17 @@
 }
 
 .home-container .body-container .header button:hover {
-	transform: scale(0.97);
+	transform: scale(0.99);
 	border: 3px solid #0ee640;
 }
 
 .home-container .body-container .header button:active {
 	transform: scale(1.02);
+}
+
+.home-container .body-container .header button.hover-link::after {
+	background-color: #1316f2;
+	height: 2px;
 }
 
 .home-container .body-container .section-container {
