@@ -6,7 +6,23 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 // internal components
 import "./BoysLab2.css";
 
-const BoysLab2 = ({ setSelectedLab }) => {
+const BoysLab2 = ({
+	setSelectedLab,
+	boysLab_2L_1,
+	setBoysLab_2L_1,
+
+	boysLab_2L_2,
+	setBoysLab_2L_2,
+
+	boysLab_2L_3,
+	setBoysLab_2L_3,
+
+	boysLab_2L_4,
+	setBoysLab_2L_4,
+
+	boysLab_2L_5,
+	setBoysLab_2L_5
+}) => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -48,12 +64,6 @@ const BoysLab2 = ({ setSelectedLab }) => {
 	// fetching data from database end
 
 	// for counting booking seat & empty seat start
-	const [boysLab_2L_1, setBoysLab_2L_1] = useState([]);
-	const [boysLab_2L_2, setBoysLab_2L_2] = useState([]);
-	const [boysLab_2L_3, setBoysLab_2L_3] = useState([]);
-	const [boysLab_2L_4, setBoysLab_2L_4] = useState([]);
-	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
-
 	useEffect(() => {
 		if (getDocs) {
 			setBoysLab_2L_1(
@@ -126,6 +136,7 @@ const BoysLab2 = ({ setSelectedLab }) => {
 					.filter((result) => result === true)
 			);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [getDocs]);
 	// for counting booking seat & empty seat end
 

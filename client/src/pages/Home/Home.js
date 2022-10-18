@@ -43,6 +43,13 @@ const Home = () => {
 	const [boysLab_1L_3, setBoysLab_1L_3] = useState([]);
 	const [boysLab_1L_4, setBoysLab_1L_4] = useState([]);
 
+	// boys-lab-2 states
+	const [boysLab_2L_1, setBoysLab_2L_1] = useState([]);
+	const [boysLab_2L_2, setBoysLab_2L_2] = useState([]);
+	const [boysLab_2L_3, setBoysLab_2L_3] = useState([]);
+	const [boysLab_2L_4, setBoysLab_2L_4] = useState([]);
+	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
+
 	return (
 		<>
 			<div className="container-fluid p-0">
@@ -258,13 +265,28 @@ const Home = () => {
 										<h5>Ridhima Boys Lab 2</h5>
 										<div id="counter">
 											<span>
-												Total Seat : <b>10</b>{" "}
+												Total Seat : <b>117</b>{" "}
 											</span>
 											<span>
-												Booked Seat : <b>10</b>{" "}
+												Booked Seat :{" "}
+												<b>
+													{boysLab_2L_1.length +
+														boysLab_2L_2.length +
+														boysLab_2L_3.length +
+														boysLab_2L_4.length +
+														boysLab_2L_5.length}
+												</b>{" "}
 											</span>
 											<span>
-												Empty Seat : <b>10</b>{" "}
+												Empty Seat :{" "}
+												<b>
+													{117 -
+														(boysLab_2L_1.length +
+															boysLab_2L_2.length +
+															boysLab_2L_3.length +
+															boysLab_2L_4.length +
+															boysLab_2L_5.length)}
+												</b>{" "}
 											</span>
 										</div>
 									</div>
@@ -357,7 +379,19 @@ const Home = () => {
 					)}
 
 					{selectedLab === "ridhima-boys-lab-2" && (
-						<BoysLab2 setSelectedLab={setSelectedLab} />
+						<BoysLab2
+							setSelectedLab={setSelectedLab}
+							boysLab_2L_1={boysLab_2L_1}
+							setBoysLab_2L_1={setBoysLab_2L_1}
+							boysLab_2L_2={boysLab_2L_2}
+							setBoysLab_2L_2={setBoysLab_2L_2}
+							boysLab_2L_3={boysLab_2L_3}
+							setBoysLab_2L_3={setBoysLab_2L_3}
+							boysLab_2L_4={boysLab_2L_4}
+							setBoysLab_2L_4={setBoysLab_2L_4}
+							boysLab_2L_5={boysLab_2L_5}
+							setBoysLab_2L_5={setBoysLab_2L_5}
+						/>
 					)}
 				</div>
 			</div>
