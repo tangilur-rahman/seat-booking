@@ -105,7 +105,36 @@
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
+	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-1 #row-container #count-section {
+	position: absolute;
+	display: flex;
+	top: 40%;
+	left: 38%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-1 #row-container #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.girls-1-wrapper #layout-1 #row-container #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-1 #row-container #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-1 #row-container #row-1 {
 	display: flex;
@@ -145,7 +174,38 @@
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
 	margin-right: 4.2vw;
+	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-2 #count-section {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	left: 0.5%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-2 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.girls-1-wrapper #layout-2 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-2 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-2 #row-1 {
 	display: flex;
@@ -174,7 +234,38 @@
 	margin-right: 4.2vw;
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
+	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-3 #count-section {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	left: 0.5%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-3 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.girls-1-wrapper #layout-3 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-3 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-3 #row-1 {
 	display: flex;
@@ -203,7 +294,38 @@
 	margin-right: 4.2vw;
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
+	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-4 #count-section {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	left: 0.5%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-4 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.girls-1-wrapper #layout-4 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-4 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-4 #row-1 {
 	display: flex;
@@ -232,7 +354,38 @@
 	margin-right: 4.2vw;
 	border-right: 3px solid #a5a5a5;
 	border-left: 3px solid #a5a5a5;
+	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-5 #count-section {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	left: 0.5%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-5 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.girls-1-wrapper #layout-5 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-5 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-5 #row-1 {
 	display: flex;
@@ -264,6 +417,36 @@
 	border-bottom-left-radius: 10px;
 	position: relative;
 }
+
+/* for count style start  */
+.girls-1-wrapper #layout-6 #count-section {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 28%;
+	left: 0.5%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.girls-1-wrapper #layout-6 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.girls-1-wrapper #layout-6 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-6 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
 
 .girls-1-wrapper #layout-6::after {
 	content: "";

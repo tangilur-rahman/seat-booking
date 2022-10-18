@@ -47,6 +47,103 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 	}, [isUpdate]);
 	// fetching data from database end
 
+	// for counting booking seat & empty seat start
+	const [girlsLab_1L_1, setGirlsLab_1L_1] = useState([]);
+	const [girlsLab_1L_2, setGirlsLab_1L_2] = useState([]);
+	const [girlsLab_1L_3, setGirlsLab_1L_3] = useState([]);
+	const [girlsLab_1L_4, setGirlsLab_1L_4] = useState([]);
+	const [girlsLab_1L_5, setGirlsLab_1L_5] = useState([]);
+	const [girlsLab_1L_6, setGirlsLab_1L_6] = useState([]);
+
+	useEffect(() => {
+		if (getDocs) {
+			setGirlsLab_1L_1(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(0, 25)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_1L_2(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(25, 17)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_1L_3(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(42, 16)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_1L_4(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(58, 16)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_1L_5(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(74, 16)
+					.filter((result) => result === true)
+			);
+
+			setGirlsLab_1L_6(
+				getDocs
+					.map(
+						(value) =>
+							new Date().getTime() < value?.days_left &&
+							Math.abs(
+								Math.floor(value?.days_left / (3600 * 24 * 1000)) -
+									Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+							) !== 0
+					)
+					.splice(90, 15)
+					.filter((result) => result === true)
+			);
+		}
+	}, [getDocs]);
+	// for counting booking seat & empty seat end
+
 	return (
 		<>
 			{getDocs.length > 0 && (
@@ -186,6 +283,16 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 												);
 											})
 											.splice(11, 9)}
+									</div>
+									<div id="count-section">
+										<p>
+											Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+											<h6>{girlsLab_1L_1.length}</h6>
+										</p>
+										<p>
+											Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+											<h6>{25 - girlsLab_1L_1.length}</h6>
+										</p>
 									</div>
 								</div>
 
@@ -375,6 +482,16 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 										})
 										.splice(34, 8)}
 								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_1L_2.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{17 - girlsLab_1L_2.length}</h6>
+									</p>
+								</div>
 							</div>
 
 							{/* layout-3 start  */}
@@ -501,6 +618,17 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 											);
 										})
 										.splice(50, 8)}
+								</div>
+
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_1L_3.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{16 - girlsLab_1L_3.length}</h6>
+									</p>
 								</div>
 							</div>
 							{/* layout-3 end  */}
@@ -630,6 +758,16 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 										})
 										.splice(66, 8)}
 								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_1L_4.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{16 - girlsLab_1L_4.length}</h6>
+									</p>
+								</div>
 							</div>
 							{/* layout-4 end  */}
 
@@ -757,6 +895,16 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 											);
 										})
 										.splice(82, 8)}
+								</div>
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_1L_5.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{16 - girlsLab_1L_5.length}</h6>
+									</p>
 								</div>
 							</div>
 							{/* layout-5 end  */}
@@ -890,6 +1038,17 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 
 								<div id="exit-message">
 									<p>Entry / Exit </p>
+								</div>
+
+								<div id="count-section">
+									<p>
+										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{girlsLab_1L_6.length}</h6>
+									</p>
+									<p>
+										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<h6>{15 - girlsLab_1L_6.length}</h6>
+									</p>
 								</div>
 							</div>
 							{/* layout-6 end  */}
