@@ -71,7 +71,9 @@ const Home = () => {
 										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -1 </div>
+									<div id="lab-container">
+										<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
+									</div>
 
 									<h6 className="view-seats">
 										<span className="hover-link">View Seats</span>
@@ -97,7 +99,9 @@ const Home = () => {
 										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -1 </div>
+									<div id="lab-container">
+										<img src="/assets/images/girls-lab-2.png" alt="lab-img" />
+									</div>
 
 									<h6 className="view-seats">
 										<span className="hover-link">View Seats</span>
@@ -123,7 +127,9 @@ const Home = () => {
 										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -1 </div>
+									<div id="lab-container">
+										<img src="/assets/images/basement.png" alt="lab-img" />
+									</div>
 
 									<h6 className="view-seats">
 										<span className="hover-link">View Seats</span>
@@ -151,7 +157,9 @@ const Home = () => {
 										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -1 </div>
+									<div id="lab-container">
+										<img src="/assets/images/boys-lab-1.png" alt="lab-img" />
+									</div>
 
 									<h6 className="view-seats">
 										<span className="hover-link">View Seats</span>
@@ -176,7 +184,9 @@ const Home = () => {
 										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -2 </div>
+									<div id="lab-container">
+										<img src="/assets/images/boys-lab-2.png" alt="lab-img" />
+									</div>
 
 									<h6 className="view-seats">
 										<span className="hover-link">View Seats</span>
@@ -189,24 +199,11 @@ const Home = () => {
 								>
 									<div id="header">
 										<h5>Ridhima Theory Lab</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>10</b>{" "}
-											</span>
-											<span>
-												Booked Seat : <b>10</b>{" "}
-											</span>
-											<span>
-												Empty Seat : <b>10</b>{" "}
-											</span>
-										</div>
 									</div>
 
-									<div id="lab-container">boys-lab -1 </div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
+									<div id="lab-container" className="coming-soon">
+										<h4>Coming Soon . . .</h4>{" "}
+									</div>
 								</div>
 							</div>
 						</div>
