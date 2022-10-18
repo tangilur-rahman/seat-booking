@@ -69,7 +69,8 @@ const BookingPopUp = ({
 					getGNum,
 					newDate,
 					getId,
-					frow_where
+					frow_where,
+					getDay
 				};
 
 				const response = await fetch("/user/submit", {
@@ -147,6 +148,7 @@ const BookingPopUp = ({
 				formData.append("newDate", newDate);
 				formData.append("getId", getId);
 				formData.append("frow_where", frow_where);
+				formData.append("getDay", getDay);
 
 				const response = await fetch("/user/submit/with-img", {
 					method: "POST",

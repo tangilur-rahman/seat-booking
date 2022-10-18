@@ -1,5 +1,6 @@
 // external modules
 const user = require("express").Router();
+const fast2sms = require("fast-two-sms");
 
 // internal modules
 const userModel = require("./../model/userModel");
@@ -23,8 +24,16 @@ user.get("/allDocs", async (req, res) => {
 // for updating seat information without image
 user.post("/submit", async (req, res) => {
 	try {
-		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
-			req.body;
+		const {
+			getSName,
+			getSNum,
+			getGName,
+			getGNum,
+			newDate,
+			getId,
+			frow_where,
+			getDay
+		} = req.body;
 
 		// for (let index = 1; index <= 84; index++) {
 		// 	const documents = await userModel({
@@ -39,6 +48,26 @@ user.post("/submit", async (req, res) => {
 
 		// 	await documents.save();
 		// }
+
+		const options1 = {
+			authorization:
+				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
+
+			message: `Hi ${getSName}, Congratulations  and thanks for joining Ridhima PTE Centre. Your membership of ${getDay} days has been activated successfully.`,
+			numbers: [getSNum]
+		};
+
+		await fast2sms.sendMessage(options1);
+
+		const options2 = {
+			authorization:
+				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
+
+			message: `Hi ${getGName}, Congratulations  and thanks for joining Ridhima PTE Centre. Your membership of ${getDay} days has been activated successfully.`,
+			numbers: [getGNum]
+		};
+
+		await fast2sms.sendMessage(options2);
 
 		await userModel.updateOne(
 			{ _id: getId },
@@ -65,8 +94,36 @@ const upload = multerForImg("image");
 
 user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 	try {
-		const { getSName, getSNum, getGName, getGNum, newDate, getId, frow_where } =
-			req.body;
+		const {
+			getSName,
+			getSNum,
+			getGName,
+			getGNum,
+			newDate,
+			getId,
+			frow_where,
+			getDay
+		} = req.body;
+
+		const options1 = {
+			authorization:
+				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
+
+			message: `Hi ${getSName}, Congratulations  and thanks for joining Ridhima PTE Centre. Your membership of ${getDay} days has been activated successfully.`,
+			numbers: [getSNum]
+		};
+
+		await fast2sms.sendMessage(options1);
+
+		const options2 = {
+			authorization:
+				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
+
+			message: `Hi ${getGName}, Congratulations  and thanks for joining Ridhima PTE Centre. Your membership of ${getDay} days has been activated successfully.`,
+			numbers: [getGNum]
+		};
+
+		await fast2sms.sendMessage(options2);
 
 		await userModel.updateOne(
 			{ _id: getId },
