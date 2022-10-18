@@ -20,7 +20,7 @@ const Home = () => {
 		<>
 			<div className="container-fluid p-0">
 				<div className="row m-0 home-container">
-					<div className="col-2 p-0 left-side">
+					<div className="col-12 p-0 navbar-container">
 						<div
 							className={getOption === "user" ? "option active" : "option"}
 							onClick={() => setOption("user")}
@@ -31,7 +31,7 @@ const Home = () => {
 							className={getOption === "seats" ? "option active" : "option"}
 							onClick={() => setOption("seats")}
 						>
-							<i className="fa-solid fa-user"></i> <h6>Seats</h6>
+							<i className="fa-solid fa-couch"></i> <h6>Seats</h6>
 						</div>
 						<div
 							className={getOption === "logout" ? "option active" : "option"}
@@ -42,7 +42,7 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="col-9 p-0 right-side">
+					<div className="col-12 p-0 body-container">
 						<div className="header">
 							<h3>Seats Availability</h3>
 							<button type="button" className="btn btn-light">
@@ -52,61 +52,160 @@ const Home = () => {
 
 						<div className="section-container">
 							<div className="row-1">
-								<div className="section">
-									<h5>Ridhima Girls Lab 1</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-girls-lab-1")}
-									>
-										View Seats
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-girls-lab-1")}
+								>
+									<div id="header">
+										<h5>Ridhima Girls Lab 1</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -1 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
-								<div className="section">
-									<h5>Ridhima Girls Lab 2</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-girls-lab-2")}
-									>
-										View Seats
+
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-girls-lab-2")}
+								>
+									<div id="header">
+										<h5>Ridhima Girls Lab 2</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -1 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
-								<div className="section">
-									<h5>Ridhima Basement Lab</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-basement-lab")}
-									>
-										View Seats
+
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-basement-lab")}
+								>
+									<div id="header">
+										<h5>Ridhima Basement Lab</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -1 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
 							</div>
 
 							<div className="row-2">
-								<div className="section">
-									<h5>Ridhima Boys Labs 1</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-boys-lab-1")}
-									>
-										View Seats
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-boys-lab-1")}
+								>
+									<div id="header">
+										<h5>Ridhima Boys Labs 1</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -1 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
-								<div className="section">
-									<h5>Ridhima Boys Lab 2</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-boys-lab-2")}
-									>
-										View Seats
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-boys-lab-2")}
+								>
+									<div id="header">
+										<h5>Ridhima Boys Lab 2</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -2 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
-								<div className="section">
-									<h5>Ridhima Theory Lab</h5>
-									<h6
-										className="hover-link"
-										onClick={() => setSelectedLab("ridhima-theory-lab")}
-									>
-										View Seats
+
+								<div
+									className="section"
+									onClick={() => setSelectedLab("ridhima-theory-lab")}
+								>
+									<div id="header">
+										<h5>Ridhima Theory Lab</h5>
+										<div id="counter">
+											<span>
+												Total Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Booked Seat : <b>10</b>{" "}
+											</span>
+											<span>
+												Empty Seat : <b>10</b>{" "}
+											</span>
+										</div>
+									</div>
+
+									<div id="lab-container">boys-lab -1 </div>
+
+									<h6 className="view-seats">
+										<span className="hover-link">View Seats</span>
 									</h6>
 								</div>
 							</div>
