@@ -6,7 +6,21 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 // internal components
 import "./GirlsLab1.css";
 
-const GirlsLab1 = ({ setSelectedLab }) => {
+const GirlsLab1 = ({
+	setSelectedLab,
+	girlsLab_1L_1,
+	setGirlsLab_1L_1,
+	girlsLab_1L_2,
+	setGirlsLab_1L_2,
+	girlsLab_1L_3,
+	setGirlsLab_1L_3,
+	girlsLab_1L_4,
+	setGirlsLab_1L_4,
+	girlsLab_1L_5,
+	setGirlsLab_1L_5,
+	girlsLab_1L_6,
+	setGirlsLab_1L_6
+}) => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -48,13 +62,6 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 	// fetching data from database end
 
 	// for counting booking seat & empty seat start
-	const [girlsLab_1L_1, setGirlsLab_1L_1] = useState([]);
-	const [girlsLab_1L_2, setGirlsLab_1L_2] = useState([]);
-	const [girlsLab_1L_3, setGirlsLab_1L_3] = useState([]);
-	const [girlsLab_1L_4, setGirlsLab_1L_4] = useState([]);
-	const [girlsLab_1L_5, setGirlsLab_1L_5] = useState([]);
-	const [girlsLab_1L_6, setGirlsLab_1L_6] = useState([]);
-
 	useEffect(() => {
 		if (getDocs) {
 			setGirlsLab_1L_1(
@@ -141,6 +148,7 @@ const GirlsLab1 = ({ setSelectedLab }) => {
 					.filter((result) => result === true)
 			);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [getDocs]);
 	// for counting booking seat & empty seat end
 

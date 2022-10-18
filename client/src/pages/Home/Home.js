@@ -16,6 +16,14 @@ const Home = () => {
 	// for lab selection
 	const [selectedLab, setSelectedLab] = useState("");
 
+	// girls-lab-1 states
+	const [girlsLab_1L_1, setGirlsLab_1L_1] = useState([]);
+	const [girlsLab_1L_2, setGirlsLab_1L_2] = useState([]);
+	const [girlsLab_1L_3, setGirlsLab_1L_3] = useState([]);
+	const [girlsLab_1L_4, setGirlsLab_1L_4] = useState([]);
+	const [girlsLab_1L_5, setGirlsLab_1L_5] = useState([]);
+	const [girlsLab_1L_6, setGirlsLab_1L_6] = useState([]);
+
 	return (
 		<>
 			<div className="container-fluid p-0">
@@ -60,13 +68,30 @@ const Home = () => {
 										<h5>Ridhima Girls Lab 1</h5>
 										<div id="counter">
 											<span>
-												Total Seat : <b>10</b>{" "}
+												Total Seat : <b>105</b>{" "}
 											</span>
 											<span>
-												Booked Seat : <b>10</b>{" "}
+												Booked Seat :{" "}
+												<b>
+													{girlsLab_1L_1.length +
+														girlsLab_1L_2.length +
+														girlsLab_1L_3.length +
+														girlsLab_1L_4.length +
+														girlsLab_1L_5.length +
+														girlsLab_1L_6.length}
+												</b>{" "}
 											</span>
 											<span>
-												Empty Seat : <b>10</b>{" "}
+												Empty Seat :{" "}
+												<b>
+													{105 -
+														(girlsLab_1L_1.length +
+															girlsLab_1L_2.length +
+															girlsLab_1L_3.length +
+															girlsLab_1L_4.length +
+															girlsLab_1L_5.length +
+															girlsLab_1L_6.length)}
+												</b>{" "}
 											</span>
 										</div>
 									</div>
@@ -210,7 +235,21 @@ const Home = () => {
 					</div>
 
 					{selectedLab === "ridhima-girls-lab-1" && (
-						<GirlsLab1 setSelectedLab={setSelectedLab} />
+						<GirlsLab1
+							setSelectedLab={setSelectedLab}
+							girlsLab_1L_1={girlsLab_1L_1}
+							setGirlsLab_1L_1={setGirlsLab_1L_1}
+							girlsLab_1L_2={girlsLab_1L_2}
+							setGirlsLab_1L_2={setGirlsLab_1L_2}
+							girlsLab_1L_3={girlsLab_1L_3}
+							setGirlsLab_1L_3={setGirlsLab_1L_3}
+							girlsLab_1L_4={girlsLab_1L_4}
+							setGirlsLab_1L_4={setGirlsLab_1L_4}
+							girlsLab_1L_5={girlsLab_1L_5}
+							setGirlsLab_1L_5={setGirlsLab_1L_5}
+							girlsLab_1L_6={girlsLab_1L_6}
+							setGirlsLab_1L_6={setGirlsLab_1L_6}
+						/>
 					)}
 
 					{selectedLab === "ridhima-girls-lab-2" && (
