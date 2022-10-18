@@ -226,3 +226,14 @@
 	margin: 0;
 }
 /* body-container-end */
+
+/* when want to print  */
+@media print {
+	.home-container .navbar-container {
+		display: none;
+	}
+
+	.home-container .body-container {
+		display: none;
+	}
+}

@@ -1,6 +1,7 @@
 // external components
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import GenerateReport from "../../components/GenerateReport/GenerateReport";
 
 // internal components
 import { GetContextApi } from "../../ContextApi";
@@ -56,7 +57,8 @@ const Home = () => {
 	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
 
 	// for getting those document which are updated today start
-	const [generateR, setGenerateR] = useState("");
+	const [generateT, setGenerateT] = useState("");
+	const [generateR, setGenerateR] = useState([]);
 
 	useEffect(() => {
 		(async () => {
@@ -91,8 +93,6 @@ const Home = () => {
 	}, [updateReport]);
 	// for getting those document which are updated today end
 
-	console.log(generateR);
-
 	return (
 		<>
 			<div className="container-fluid p-0">
@@ -122,7 +122,11 @@ const Home = () => {
 					<div className="col-12 p-0 body-container">
 						<div className="header">
 							<h3>Seats Availability</h3>
-							<button type="button" className="btn btn-light hover-link">
+							<button
+								type="button"
+								className="btn btn-light hover-link"
+								onClick={() => setGenerateT(!generateT)}
+							>
 								Generate Report
 							</button>
 						</div>
@@ -435,6 +439,10 @@ const Home = () => {
 							boysLab_2L_5={boysLab_2L_5}
 							setBoysLab_2L_5={setBoysLab_2L_5}
 						/>
+					)}
+
+					{generateT && (
+						<GenerateReport setGenerateT={setGenerateT} generateR={generateR} />
 					)}
 				</div>
 			</div>
