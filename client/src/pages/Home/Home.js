@@ -31,6 +31,12 @@ const Home = () => {
 	const [girlsLab_2L_4, setGirlsLab_2L_4] = useState([]);
 	const [girlsLab_2L_5, setGirlsLab_2L_5] = useState([]);
 
+	// basement state
+	const [basementL_1, setBasementL_1] = useState([]);
+	const [basementL_2, setBasementL_2] = useState([]);
+	const [basementL_3, setBasementL_3] = useState([]);
+	const [basementL_4, setBasementL_4] = useState([]);
+
 	return (
 		<>
 			<div className="container-fluid p-0">
@@ -163,13 +169,26 @@ const Home = () => {
 										<h5>Ridhima Basement Lab</h5>
 										<div id="counter">
 											<span>
-												Total Seat : <b>10</b>{" "}
+												Total Seat : <b>91</b>{" "}
 											</span>
 											<span>
-												Booked Seat : <b>10</b>{" "}
+												Booked Seat :{" "}
+												<b>
+													{basementL_1.length +
+														basementL_2.length +
+														basementL_3.length +
+														basementL_4.length}
+												</b>{" "}
 											</span>
 											<span>
-												Empty Seat : <b>10</b>{" "}
+												Empty Seat :{" "}
+												<b>
+													{91 -
+														(basementL_1.length +
+															basementL_2.length +
+															basementL_3.length +
+															basementL_4.length)}
+												</b>{" "}
 											</span>
 										</div>
 									</div>
@@ -291,7 +310,17 @@ const Home = () => {
 					)}
 
 					{selectedLab === "ridhima-basement-lab" && (
-						<Basement setSelectedLab={setSelectedLab} />
+						<Basement
+							setSelectedLab={setSelectedLab}
+							basementL_1={basementL_1}
+							setBasementL_1={setBasementL_1}
+							basementL_2={basementL_2}
+							setBasementL_2={setBasementL_2}
+							basementL_3={basementL_3}
+							setBasementL_3={setBasementL_3}
+							basementL_4={basementL_4}
+							setBasementL_4={setBasementL_4}
+						/>
 					)}
 
 					{selectedLab === "ridhima-boys-lab-1" && (

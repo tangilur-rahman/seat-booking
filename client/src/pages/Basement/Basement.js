@@ -6,7 +6,17 @@ import BookingPopUp from "../../components/BookingPopUp/BookingPopUp";
 // internal components
 import "./Basement.css";
 
-const Basement = ({ setSelectedLab }) => {
+const Basement = ({
+	setSelectedLab,
+	basementL_1,
+	setBasementL_1,
+	basementL_2,
+	setBasementL_2,
+	basementL_3,
+	setBasementL_3,
+	basementL_4,
+	setBasementL_4
+}) => {
 	// for updating booking
 	const [isUpdate, setIsUpdate] = useState("");
 
@@ -48,11 +58,6 @@ const Basement = ({ setSelectedLab }) => {
 	// fetching data from database end
 
 	// for counting booking seat & empty seat start
-	const [basementL_1, setBasementL_1] = useState([]);
-	const [basementL_2, setBasementL_2] = useState([]);
-	const [basementL_3, setBasementL_3] = useState([]);
-	const [basementL_4, setBasementL_4] = useState([]);
-
 	useEffect(() => {
 		if (getDocs) {
 			setBasementL_1(
@@ -111,6 +116,7 @@ const Basement = ({ setSelectedLab }) => {
 					.filter((result) => result === true)
 			);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [getDocs]);
 	// for counting booking seat & empty seat end
 
