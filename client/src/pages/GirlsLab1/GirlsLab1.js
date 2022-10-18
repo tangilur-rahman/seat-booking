@@ -157,7 +157,7 @@ const GirlsLab1 = ({
 			{getDocs.length > 0 && (
 				<div
 					className="container-fluid p-0 girls-1-main-container"
-					data-aos="fade-down"
+					data-aos="zoom-in"
 					data-aos-duration="700"
 				>
 					<div className="row m-0 girls-1-container">

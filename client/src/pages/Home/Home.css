@@ -193,7 +193,8 @@
 }
 
 .body-container .section-container .section h6 span::after {
-	background-color: black;
+	background-color: rgb(46, 10, 250);
+	height: 3.5px;
 }
 
 .body-container .section-container .section #lab-container {
