@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 // internal components
 import { GetContextApi } from "../../ContextApi";
 import "./BookingPopUp.css";
+import WebCamera from "./WebCamera/WebCamera";
 
 const BookingPopUp = ({
 	getId,
@@ -50,6 +51,9 @@ const BookingPopUp = ({
 	// for getting img
 	const [getImage, setImage] = useState("");
 	const [getPreview, setPreview] = useState("");
+
+	// for toggle web-camera
+	const [webCamT, setWebCamT] = useState("");
 
 	// submit handler start
 	const submitHandler = async () => {
@@ -338,11 +342,10 @@ const BookingPopUp = ({
 										</div>
 									) : (
 										<div id="upload-btn">
+											<p onClick={() => setWebCamT(!webCamT)}>Take a image</p>
 											<label htmlFor="for-image">
 												<p>Upload a image</p>
 											</label>
-
-											<p>Take a image</p>
 										</div>
 									)}
 								</div>
@@ -400,6 +403,13 @@ const BookingPopUp = ({
 					>
 						<i className="fa-solid fa-x"></i>
 					</div>
+					{webCamT && (
+						<WebCamera
+							setWebCamT={setWebCamT}
+							setPreview={setPreview}
+							setImage={setImage}
+						/>
+					)}
 				</div>
 
 				<input

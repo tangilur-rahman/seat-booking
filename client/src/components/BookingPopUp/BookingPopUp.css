@@ -155,6 +155,8 @@
 	border: 1px solid black;
 	height: 50px;
 	justify-content: flex-start;
+	border: 1px solid red;
+	width: 95%;
 }
 
 .input-fields-container .upload #upload-btn {
@@ -177,7 +179,7 @@
 	border-radius: 10px;
 }
 
-.input-fields-container .upload label p:first-child {
+.input-fields-container .upload label p:last-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -185,7 +187,7 @@
 	cursor: pointer;
 }
 
-.input-fields-container .upload p:last-child {
+.input-fields-container .upload p:first-child {
 	display: flex;
 	justify-content: center;
 	align-items: center;
