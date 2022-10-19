@@ -330,18 +330,22 @@ const BookingPopUp = ({
 							</div>
 
 							{!getBooked && (
-								<label htmlFor="for-image">
-									<div className="upload" id={getPreview ? "preview" : ""}>
-										{getPreview ? (
-											<div id="display-preview">
-												<img src={getPreview} alt="profile-img" />
-												<h5>{getImage.name}</h5>
-											</div>
-										) : (
-											<p>Upload a profile image</p>
-										)}
-									</div>
-								</label>
+								<div className="upload" id={getPreview ? "preview" : ""}>
+									{getPreview ? (
+										<div id="display-preview">
+											<img src={getPreview} alt="profile-img" />
+											<h5>{getImage.name}</h5>
+										</div>
+									) : (
+										<div id="upload-btn">
+											<label htmlFor="for-image">
+												<p>Upload a image</p>
+											</label>
+
+											<p>Take a image</p>
+										</div>
+									)}
+								</div>
 							)}
 
 							{!getBooked && (
