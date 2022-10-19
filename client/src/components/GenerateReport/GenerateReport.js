@@ -16,39 +16,33 @@ const GenerateReport = ({ setGenerateT, generateR }) => {
 						<h4>Booked Report</h4>
 						<p> Date&nbsp;:&nbsp; {new Date().toISOString().slice(0, 10)}</p>
 					</div>
-					<table class="table table-hover table-bordered">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Student Name</th>
-								<th scope="col">Student Number</th>
-								<th scope="col">Guardian Name</th>
-								<th scope="col">Guardian Number</th>
-								<th scope="col">Days Left</th>
-								<th scope="col">Location</th>
-							</tr>
-						</thead>
-						<tbody>
-							{generateR.length > 0 &&
-								generateR
-									.map((value, index) => {
-										return (
-											<tr>
-												<th scope="row">{index + 1}</th>
-												<td>{value.student_name}</td>
-												<td>{value.student_number}</td>
-												<td>{value.guardian_name}</td>
-												<td>{value.guardian_number}</td>
-												<td>
-													{new Date().getTime() < value.days_left
-														? Math.abs(
-																Math.floor(
-																	value.days_left / (3600 * 24 * 1000)
-																) -
-																	Math.floor(
-																		new Date().getTime() / (3600 * 24 * 1000)
-																	)
-														  ) !== 0
+
+					<div className="table-wrapper">
+						<table class="table table-hover table-bordered">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Student Name</th>
+									<th scope="col">Student Number</th>
+									<th scope="col">Guardian Name</th>
+									<th scope="col">Guardian Number</th>
+									<th scope="col">Days Left</th>
+									<th scope="col">Location</th>
+								</tr>
+							</thead>
+							<tbody>
+								{generateR.length > 0 &&
+									generateR
+										.map((value, index) => {
+											return (
+												<tr>
+													<th scope="row">{index + 1}</th>
+													<td>{value.student_name}</td>
+													<td>{value.student_number}</td>
+													<td>{value.guardian_name}</td>
+													<td>{value.guardian_number}</td>
+													<td>
+														{new Date().getTime() < value.days_left
 															? Math.abs(
 																	Math.floor(
 																		value.days_left / (3600 * 24 * 1000)
@@ -56,17 +50,27 @@ const GenerateReport = ({ setGenerateT, generateR }) => {
 																		Math.floor(
 																			new Date().getTime() / (3600 * 24 * 1000)
 																		)
-															  )
-															: ""
-														: ""}
-												</td>
-												<td>{value.frow_where}</td>
-											</tr>
-										);
-									})
-									.reverse()}
-						</tbody>
-					</table>
+															  ) !== 0
+																? Math.abs(
+																		Math.floor(
+																			value.days_left / (3600 * 24 * 1000)
+																		) -
+																			Math.floor(
+																				new Date().getTime() /
+																					(3600 * 24 * 1000)
+																			)
+																  )
+																: ""
+															: ""}
+													</td>
+													<td>{value.frow_where}</td>
+												</tr>
+											);
+										})
+										.reverse()}
+							</tbody>
+						</table>
+					</div>
 
 					<div
 						className="close-btn-basement"

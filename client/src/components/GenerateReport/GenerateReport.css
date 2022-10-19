@@ -64,7 +64,7 @@
 	margin: 0;
 	letter-spacing: 1px;
 	word-spacing: 10px;
-	border-bottom: 3px solid #a5a5a5;
+	border-bottom: 3px solid #166cee;
 	padding-bottom: 5px;
 }
 
@@ -78,8 +78,14 @@
 }
 
 /* table style start  */
+.generate-report-wrapper .table-wrapper {
+	width: 100%;
+	height: calc(100% - 4vh);
+	overflow: auto;
+	margin-top: 20px;
+}
+
 .generate-report-wrapper table {
-	margin-top: 25px;
 	text-align: center;
 	overflow: auto;
 }
@@ -90,6 +96,7 @@
 
 .generate-report-wrapper table tr {
 	cursor: pointer;
+	font-weight: 500;
 }
 /* table style end */
 
