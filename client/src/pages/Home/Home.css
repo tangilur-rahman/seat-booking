@@ -46,6 +46,10 @@
 	border: none;
 }
 
+.home-container .navbar-container .active:last-child {
+	border-right: 3px solid #5d5fef;
+}
+
 .home-container .navbar-container .option:hover i {
 	color: #5d5fef;
 }
