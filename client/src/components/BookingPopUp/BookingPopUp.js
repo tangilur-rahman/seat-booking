@@ -338,7 +338,9 @@ const BookingPopUp = ({
 									{getPreview ? (
 										<div id="display-preview">
 											<img src={getPreview} alt="profile-img" />
-											<h5>{getImage.name}</h5>
+											<h5>
+												{getImage.name ? getImage.name : "screenshot.png"}
+											</h5>
 										</div>
 									) : (
 										<div id="upload-btn">

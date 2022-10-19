@@ -1,5 +1,5 @@
 // external components
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 
 // internal components
@@ -19,6 +19,54 @@ const WebCamera = ({ setWebCamT, setPreview, setImage }) => {
 		setSc(imageSrc);
 	}, [webcamRef]);
 
+	// base64 file to convert upload format start
+	const [isAccept, setIsAccept] = useState("");
+
+	useEffect(() => {
+		if (getSc) {
+			function b64toBlob(b64Data, contentType, sliceSize) {
+				contentType = contentType || "";
+				sliceSize = sliceSize || 512;
+
+				let byteCharacters = atob(b64Data); // window.atob(b64Data)
+				let byteArrays = [];
+
+				for (
+					let offset = 0;
+					offset < byteCharacters.length;
+					offset += sliceSize
+				) {
+					let slice = byteCharacters.slice(offset, offset + sliceSize);
+
+					let byteNumbers = new Array(slice.length);
+					for (let i = 0; i < slice.length; i++) {
+						byteNumbers[i] = slice.charCodeAt(i);
+					}
+
+					let byteArray = new Uint8Array(byteNumbers);
+
+					byteArrays.push(byteArray);
+				}
+
+				let blob = new Blob(byteArrays, { type: contentType });
+				return blob;
+			}
+
+			const ImageURL = getSc; // 'photo' is your base64 image
+			// Split the base64 string in data and contentType
+			const block = ImageURL.split(";");
+			// Get the content type of the image
+			const contentType = block[0].split(":")[1]; // In this case "image/gif"
+			// get the real base64 content of the file
+			const realData = block[1].split(",")[1];
+
+			// Convert it to a blob to upload
+			setImage(b64toBlob(realData, contentType));
+		}
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isAccept]); // base64 file to convert upload format end
+
 	return (
 		<>
 			<div className="web-cam-container">
@@ -35,7 +83,6 @@ const WebCamera = ({ setWebCamT, setPreview, setImage }) => {
 								screenshotFormat="image/png"
 								videoConstraints={videoConstraints}
 								mirrored={true}
-								screenshotQuality={1}
 							/>
 						)}
 					</div>
@@ -48,7 +95,6 @@ const WebCamera = ({ setWebCamT, setPreview, setImage }) => {
 								</button>
 								<button
 									onClick={() => {
-										setImage(getSc);
 										setPreview(getSc);
 										setWebCamT(false);
 									}}
@@ -61,11 +107,22 @@ const WebCamera = ({ setWebCamT, setPreview, setImage }) => {
 							<div id="want-sc">
 								<button
 									className="btn btn-dark"
-									onClick={() => setWebCamT(false)}
+									onClick={() => {
+										setWebCamT(false);
+										setIsAccept("");
+										setPreview("");
+										setImage("");
+									}}
 								>
 									<span className="hover-link">Cancel</span>
 								</button>
-								<button className="btn btn-primary" onClick={capturePhoto}>
+								<button
+									className="btn btn-primary"
+									onClick={() => {
+										capturePhoto();
+										setIsAccept(Date.now());
+									}}
+								>
 									<span className="hover-link">Capture</span>
 								</button>
 							</div>

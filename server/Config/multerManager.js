@@ -13,8 +13,10 @@ const multerForImg = (filename) => {
 		destination: (req, file, cb) => {
 			cb(null, UPLOADS_FOLDER);
 		},
+
 		filename: (req, file, cb) => {
-			const fileExt = path.extname(file.originalname);
+			const fileExt =
+				file.originalname === "blob" ? ".png" : path.extname(file.originalname);
 			const fileName =
 				file.originalname
 					.replace(fileExt, "")
