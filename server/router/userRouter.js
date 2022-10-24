@@ -49,6 +49,21 @@ user.post("/submit", async (req, res) => {
 		// 	await documents.save();
 		// }
 
+		await userModel.updateOne(
+			{ _id: getId },
+			{
+				$set: {
+					student_name: getSName,
+					student_number: getSNum,
+					guardian_name: getGName,
+					guardian_number: getGNum,
+					days_left: newDate,
+					frow_where,
+					date: new Date().toISOString().slice(0, 10)
+				}
+			}
+		);
+
 		const options1 = {
 			authorization:
 				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
@@ -68,21 +83,6 @@ user.post("/submit", async (req, res) => {
 		};
 
 		await fast2sms.sendMessage(options2);
-
-		await userModel.updateOne(
-			{ _id: getId },
-			{
-				$set: {
-					student_name: getSName,
-					student_number: getSNum,
-					guardian_name: getGName,
-					guardian_number: getGNum,
-					days_left: newDate,
-					frow_where,
-					date: new Date().toISOString().slice(0, 10)
-				}
-			}
-		);
 
 		res.status(200).json({ message: "Submit successfully." });
 	} catch (error) {
@@ -106,6 +106,22 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 			getDay
 		} = req.body;
 
+		await userModel.updateOne(
+			{ _id: getId },
+			{
+				$set: {
+					student_name: getSName,
+					student_number: getSNum,
+					guardian_name: getGName,
+					guardian_number: getGNum,
+					days_left: newDate,
+					frow_where,
+					profile_img: req.file.filename,
+					date: new Date().toISOString().slice(0, 10)
+				}
+			}
+		);
+
 		const options1 = {
 			authorization:
 				"xsHXYHLKkSoG0TAn2M00pNDa5jaBb6zBAnwjAW5RwDI9opRPjIaTtE1b9lTE",
@@ -125,22 +141,6 @@ user.post("/submit/with-img", upload.single("image"), async (req, res) => {
 		};
 
 		await fast2sms.sendMessage(options2);
-
-		await userModel.updateOne(
-			{ _id: getId },
-			{
-				$set: {
-					student_name: getSName,
-					student_number: getSNum,
-					guardian_name: getGName,
-					guardian_number: getGNum,
-					days_left: newDate,
-					frow_where,
-					profile_img: req.file.filename,
-					date: new Date().toISOString().slice(0, 10)
-				}
-			}
-		);
 
 		res.status(200).json({ message: "Submit successfully." });
 	} catch (error) {
