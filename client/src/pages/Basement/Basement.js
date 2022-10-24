@@ -266,11 +266,11 @@ const Basement = ({
 										</div>
 										<div id="count-section">
 											<p>
-												Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 												<h6>{basementL_1.length}</h6>
 											</p>
 											<p>
-												Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 												<h6>{25 - basementL_1.length}</h6>
 											</p>
 										</div>
@@ -547,11 +547,11 @@ const Basement = ({
 										</div>
 										<div id="count-section">
 											<p>
-												Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 												<h6>{basementL_4.length}</h6>
 											</p>
 											<p>
-												Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+												<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 												<h6>{23 - basementL_4.length}</h6>
 											</p>
 										</div>
@@ -1166,20 +1166,22 @@ const Basement = ({
 							</div>
 							<div id="count-section-2">
 								<p>
-									Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{basementL_2.length}</h6>
+									<div className="booked-seat-style"></div>&nbsp;=&nbsp;
+									<h6>{basementL_2.length}</h6>
 								</p>
 								<p>
-									Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+									<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 									<h6>{22 - basementL_2.length}</h6>
 								</p>
 							</div>
 
 							<div id="count-section-3">
 								<p>
-									Booked&nbsp;Seat&nbsp;:&nbsp; <h6>{basementL_3.length}</h6>
+									<div className="booked-seat-style"></div>&nbsp;=&nbsp;
+									<h6>{basementL_3.length}</h6>
 								</p>
 								<p>
-									Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+									<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 									<h6>{21 - basementL_3.length}</h6>
 								</p>
 							</div>

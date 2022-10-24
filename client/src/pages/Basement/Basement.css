@@ -127,8 +127,8 @@
 .basement-wrapper #top #left #inside-box #count-section {
 	position: absolute;
 	display: flex;
-	top: 47%;
-	left: 21%;
+	top: 42%;
+	left: 18%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -139,6 +139,20 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+}
+
+.basement-wrapper #top #left #inside-box #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.basement-wrapper #top #left #inside-box #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .basement-wrapper #top #left #inside-box #count-section p:first-child {
@@ -214,7 +228,7 @@
 	position: absolute;
 	display: flex;
 	top: 35%;
-	left: 28%;
+	left: 40%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -229,6 +243,30 @@
 
 .basement-wrapper #top #right #right-inside-box #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.basement-wrapper
+	#top
+	#right
+	#right-inside-box
+	#count-section
+	.booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.basement-wrapper
+	#top
+	#right
+	#right-inside-box
+	#count-section
+	.empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .basement-wrapper #top #right #right-inside-box #count-section p h6 {
@@ -401,7 +439,7 @@
 .basement-wrapper #count-section-2 {
 	position: absolute;
 	display: flex;
-	bottom: 17%;
+	bottom: 16%;
 	left: 12%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -419,6 +457,20 @@
 	padding-right: 20px;
 }
 
+.basement-wrapper #count-section-2 .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.basement-wrapper #count-section-2 .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
+}
+
 .basement-wrapper #count-section-2 p h6 {
 	margin: 0;
 	font-weight: 600;
@@ -427,7 +479,7 @@
 .basement-wrapper #count-section-3 {
 	position: absolute;
 	display: flex;
-	bottom: 17%;
+	bottom: 16%;
 	right: 12%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -443,6 +495,20 @@
 
 .basement-wrapper #count-section-3 p:first-child {
 	padding-right: 20px;
+}
+
+.basement-wrapper #count-section-3 .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.basement-wrapper #count-section-3 .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .basement-wrapper #count-section-3 p h6 {
