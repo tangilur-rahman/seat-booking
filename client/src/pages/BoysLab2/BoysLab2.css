@@ -101,7 +101,7 @@
 	transform: rotate(90deg);
 	display: flex;
 	top: 47%;
-	left: -7%;
+	left: 23%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -116,6 +116,20 @@
 
 .boys-2-wrapper #layout-1 #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-1 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-2-wrapper #layout-1 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .boys-2-wrapper #layout-1 #count-section p h6 {
@@ -189,7 +203,7 @@
 	transform: rotate(90deg);
 	display: flex;
 	top: 47%;
-	left: -7%;
+	left: 20%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -204,6 +218,20 @@
 
 .boys-2-wrapper #layout-2 #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-2 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-2-wrapper #layout-2 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .boys-2-wrapper #layout-2 #count-section p h6 {
@@ -280,7 +308,7 @@
 	transform: rotate(90deg);
 	display: flex;
 	top: 47%;
-	left: -7%;
+	left: 22%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -295,6 +323,20 @@
 
 .boys-2-wrapper #layout-3 #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-3 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-2-wrapper #layout-3 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .boys-2-wrapper #layout-3 #count-section p h6 {
@@ -371,7 +413,7 @@
 	transform: rotate(90deg);
 	display: flex;
 	top: 47%;
-	left: -7%;
+	left: 25%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -386,6 +428,20 @@
 
 .boys-2-wrapper #layout-4 #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-4 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-2-wrapper #layout-4 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .boys-2-wrapper #layout-4 #count-section p h6 {
@@ -461,7 +517,7 @@
 	transform: rotate(90deg);
 	display: flex;
 	top: 47%;
-	left: -7%;
+	left: 15%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -476,6 +532,20 @@
 
 .boys-2-wrapper #layout-5 #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.boys-2-wrapper #layout-5 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-2-wrapper #layout-5 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .boys-2-wrapper #layout-5 #count-section p h6 {
