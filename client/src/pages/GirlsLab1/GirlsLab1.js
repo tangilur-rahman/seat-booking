@@ -294,11 +294,11 @@ const GirlsLab1 = ({
 									</div>
 									<div id="count-section">
 										<p>
-											Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+											<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 											<h6>{girlsLab_1L_1.length}</h6>
 										</p>
 										<p>
-											Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+											<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 											<h6>{25 - girlsLab_1L_1.length}</h6>
 										</p>
 									</div>
@@ -492,11 +492,11 @@ const GirlsLab1 = ({
 								</div>
 								<div id="count-section">
 									<p>
-										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{girlsLab_1L_2.length}</h6>
 									</p>
 									<p>
-										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{17 - girlsLab_1L_2.length}</h6>
 									</p>
 								</div>
@@ -630,11 +630,11 @@ const GirlsLab1 = ({
 
 								<div id="count-section">
 									<p>
-										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{girlsLab_1L_3.length}</h6>
 									</p>
 									<p>
-										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{16 - girlsLab_1L_3.length}</h6>
 									</p>
 								</div>
@@ -768,11 +768,11 @@ const GirlsLab1 = ({
 								</div>
 								<div id="count-section">
 									<p>
-										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{girlsLab_1L_4.length}</h6>
 									</p>
 									<p>
-										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{16 - girlsLab_1L_4.length}</h6>
 									</p>
 								</div>
@@ -906,11 +906,11 @@ const GirlsLab1 = ({
 								</div>
 								<div id="count-section">
 									<p>
-										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{girlsLab_1L_5.length}</h6>
 									</p>
 									<p>
-										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{16 - girlsLab_1L_5.length}</h6>
 									</p>
 								</div>
@@ -1050,11 +1050,11 @@ const GirlsLab1 = ({
 
 								<div id="count-section">
 									<p>
-										Booked&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="booked-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{girlsLab_1L_6.length}</h6>
 									</p>
 									<p>
-										Empty&nbsp;Seat&nbsp;:&nbsp;{" "}
+										<div className="empty-seat-style"></div>&nbsp;=&nbsp;
 										<h6>{15 - girlsLab_1L_6.length}</h6>
 									</p>
 								</div>

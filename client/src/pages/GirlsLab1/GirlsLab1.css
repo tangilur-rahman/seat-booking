@@ -113,7 +113,7 @@
 	position: absolute;
 	display: flex;
 	top: 40%;
-	left: 38%;
+	left: 45%;
 	width: -moz-fit-content;
 	width: fit-content;
 	height: -moz-fit-content;
@@ -128,6 +128,20 @@
 
 .girls-1-wrapper #layout-1 #row-container #count-section p:first-child {
 	padding-right: 20px;
+}
+
+.girls-1-wrapper #layout-1 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-1 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-1 #row-container #count-section p h6 {
@@ -182,7 +196,7 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 30%;
+	top: 25%;
 	left: 0.5%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -194,11 +208,26 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .girls-1-wrapper #layout-2 #count-section p:first-child {
-	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.girls-1-wrapper #layout-2 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-2 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-2 #count-section p h6 {
@@ -242,7 +271,7 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 30%;
+	top: 25%;
 	left: 0.5%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -254,11 +283,26 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .girls-1-wrapper #layout-3 #count-section p:first-child {
-	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.girls-1-wrapper #layout-3 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-3 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-3 #count-section p h6 {
@@ -302,7 +346,7 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 30%;
+	top: 25%;
 	left: 0.5%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -314,11 +358,26 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .girls-1-wrapper #layout-4 #count-section p:first-child {
-	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.girls-1-wrapper #layout-4 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-4 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-4 #count-section p h6 {
@@ -362,7 +421,7 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 30%;
+	top: 25%;
 	left: 0.5%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -374,11 +433,26 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .girls-1-wrapper #layout-5 #count-section p:first-child {
-	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.girls-1-wrapper #layout-5 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-5 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-5 #count-section p h6 {
@@ -423,7 +497,7 @@
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 28%;
+	top: 25%;
 	left: 0.5%;
 	width: -moz-fit-content;
 	width: fit-content;
@@ -435,11 +509,26 @@
 	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	font-size: 13px;
 }
 
 .girls-1-wrapper #layout-6 #count-section p:first-child {
-	padding-right: 20px;
+	margin-bottom: 10px;
+}
+
+.girls-1-wrapper #layout-6 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.girls-1-wrapper #layout-6 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
 }
 
 .girls-1-wrapper #layout-6 #count-section p h6 {
