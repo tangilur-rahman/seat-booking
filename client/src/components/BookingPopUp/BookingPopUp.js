@@ -27,6 +27,7 @@ const BookingPopUp = ({
 			setBooked("");
 			setPreview("");
 			setImage("");
+			setEditT(false);
 		}
 	};
 	useEffect(() => {
@@ -39,14 +40,32 @@ const BookingPopUp = ({
 	// for loading until not submitting on server
 	const [isLoading, setIsLoading] = useState(false);
 
+	// for edit toggle
+	const [editT, setEditT] = useState(false);
+
 	// for getting input-fields values
-	const [getSName, setSName] = useState("");
-	const [getSNum, setSNum] = useState("");
+	const [getSName, setSName] = useState(
+		getBooked ? getBooked.student_name : ""
+	);
+	const [getSNum, setSNum] = useState(
+		getBooked ? getBooked.student_number : ""
+	);
 
-	const [getGName, setGName] = useState("");
-	const [getGNum, setGNum] = useState("");
+	const [getGName, setGName] = useState(
+		getBooked ? getBooked.guardian_name : ""
+	);
+	const [getGNum, setGNum] = useState(
+		getBooked ? getBooked.guardian_number : ""
+	);
 
-	const [getDay, setDay] = useState("");
+	const [getDay, setDay] = useState(
+		getBooked
+			? Math.abs(
+					Math.floor(getBooked.days_left / (3600 * 24 * 1000)) -
+						Math.floor(new Date().getTime() / (3600 * 24 * 1000))
+			  )
+			: ""
+	);
 
 	// for getting img
 	const [getImage, setImage] = useState("");
@@ -76,7 +95,7 @@ const BookingPopUp = ({
 					getGName,
 					getGNum,
 					newDate,
-					getId,
+					getId: getBooked ? getBooked._id : getId,
 					frow_where,
 					getDay
 				};
@@ -105,6 +124,7 @@ const BookingPopUp = ({
 					setIsUpdate(Date.now());
 					setUpdateReport(Date.now());
 					setIsLoading(false);
+					setBooked("");
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
@@ -161,7 +181,7 @@ const BookingPopUp = ({
 				formData.append("getGName", getGName);
 				formData.append("getGNum", getGNum);
 				formData.append("newDate", newDate);
-				formData.append("getId", getId);
+				formData.append("getId", getBooked ? getBooked._id : getId);
 				formData.append("frow_where", frow_where);
 				formData.append("getDay", getDay);
 
@@ -188,6 +208,7 @@ const BookingPopUp = ({
 					setIsUpdate(Date.now());
 					setUpdateReport(Date.now());
 					setIsLoading(false);
+					setBooked("");
 				} else if (response.status === 400) {
 					toast(result.error, {
 						position: "top-right",
@@ -246,7 +267,7 @@ const BookingPopUp = ({
 					className="col-xl-6 col-lg-7 col-md-11 col-11 p-0 booking-popup-wrapper"
 					ref={myRef}
 				>
-					<h3>Seat Booked</h3>
+					<h3>{editT ? "Modify Seat Booked" : "Seat Booked"}</h3>
 
 					<div className="input-fields-wrapper">
 						<div
@@ -254,7 +275,7 @@ const BookingPopUp = ({
 							id={getBooked.profile_img ? "have-img" : ""}
 						>
 							<div className="input-field">
-								{getBooked ? (
+								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Student Name : </h6> <p>{getBooked.student_name}</p>
 									</div>
@@ -263,12 +284,13 @@ const BookingPopUp = ({
 										placeholder="Student Name . . ."
 										required
 										onChange={(e) => setSName(e.target.value)}
+										value={getSName}
 									/>
 								)}
 							</div>
 
 							<div className="input-field">
-								{getBooked ? (
+								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Student Number : </h6> <p>{getBooked.student_number}</p>
 									</div>
@@ -278,12 +300,13 @@ const BookingPopUp = ({
 										placeholder="Student Number . . ."
 										required
 										onChange={(e) => setSNum(e.target.value)}
+										value={getSNum}
 									/>
 								)}
 							</div>
 
 							<div className="input-field">
-								{getBooked ? (
+								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Guardian Name : </h6> <p>{getBooked.guardian_name}</p>
 									</div>
@@ -292,12 +315,13 @@ const BookingPopUp = ({
 										placeholder="Guardian Name . . ."
 										required
 										onChange={(e) => setGName(e.target.value)}
+										value={getGName}
 									/>
 								)}
 							</div>
 
 							<div className="input-field">
-								{getBooked ? (
+								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Guardian Number : </h6>{" "}
 										<p>{getBooked.guardian_number}</p>
@@ -308,12 +332,13 @@ const BookingPopUp = ({
 										placeholder="Guardian Number . . ."
 										required
 										onChange={(e) => setGNum(e.target.value)}
+										value={getGNum}
 									/>
 								)}
 							</div>
 
 							<div className="input-field">
-								{getBooked ? (
+								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Days Left : </h6>
 										<p>
@@ -329,11 +354,12 @@ const BookingPopUp = ({
 										placeholder="Days left . . ."
 										required
 										onChange={(e) => setDay(e.target.value)}
+										value={getDay}
 									/>
 								)}
 							</div>
 
-							{!getBooked && (
+							{(!getBooked || editT) && (
 								<div className="upload" id={getPreview ? "preview" : ""}>
 									{getPreview ? (
 										<div id="display-preview">
@@ -353,7 +379,7 @@ const BookingPopUp = ({
 								</div>
 							)}
 
-							{!getBooked && (
+							{(!getBooked || editT) && (
 								<div className="btn-container">
 									<button
 										type="button"
@@ -401,10 +427,18 @@ const BookingPopUp = ({
 							setId("");
 							setPreview("");
 							setImage("");
+							setEditT(false);
 						}}
 					>
 						<i className="fa-solid fa-x"></i>
 					</div>
+
+					{getBooked && (
+						<div className="for-edit" onClick={() => setEditT(!editT)}>
+							<i className="fa-solid fa-pen-to-square"></i>
+						</div>
+					)}
+
 					{webCamT && (
 						<WebCamera
 							setWebCamT={setWebCamT}
