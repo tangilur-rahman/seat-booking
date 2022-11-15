@@ -43,7 +43,7 @@ const BookingPopUp = ({
 	// for edit toggle
 	const [editT, setEditT] = useState(false);
 
-	// for getting input-fields values
+	// for getting input-fields value
 	const [getSName, setSName] = useState(
 		getBooked ? getBooked.student_name : ""
 	);
