@@ -359,7 +359,7 @@ const BookingPopUp = ({
 								)}
 							</div>
 
-							<div className="input-field">
+							{/* <div className="input-field">
 								{!editT && getBooked ? (
 									<div className="displaying">
 										<h6>Exam Date : </h6> <p>{getBooked?.exam_date}</p>
@@ -373,9 +373,9 @@ const BookingPopUp = ({
 										// value={examD}
 									/>
 								)}
-							</div>
+							</div> */}
 
-							<div className="exam-fields">
+							{/* <div className="exam-fields">
 								<div className="input-field">
 									{!editT && getBooked ? (
 										<div className="displaying">
@@ -408,7 +408,7 @@ const BookingPopUp = ({
 										/>
 									)}
 								</div>
-							</div>
+							</div> */}
 
 							{(!getBooked || editT) && (
 								<div className="upload" id={getPreview ? "preview" : ""}>

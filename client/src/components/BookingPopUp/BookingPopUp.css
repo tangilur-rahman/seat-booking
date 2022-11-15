@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	top: 0vh;
+	top: 10vh;
 }
 
 .booking-popup-container .booking-popup-wrapper {
@@ -104,6 +104,7 @@
 .booking-popup-wrapper .input-fields-wrapper {
 	display: flex;
 	width: 100%;
+	justify-content: center;
 }
 
 .booking-popup-wrapper .input-fields-container {
