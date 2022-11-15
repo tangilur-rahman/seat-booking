@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	top: 10vh;
+	top: 0vh;
 }
 
 .booking-popup-container .booking-popup-wrapper {
@@ -172,6 +172,17 @@
 	margin: 7px 0;
 	color: #6d6875;
 	font-weight: 600;
+}
+
+.input-fields-container .exam-fields {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 95%;
+}
+
+.input-fields-container .exam-fields .input-field {
+	width: 48%;
 }
 
 /* upload-image section style start  */
