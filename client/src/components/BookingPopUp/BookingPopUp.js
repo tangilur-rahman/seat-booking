@@ -359,6 +359,57 @@ const BookingPopUp = ({
 								)}
 							</div>
 
+							<div className="input-field">
+								{!editT && getBooked ? (
+									<div className="displaying">
+										<h6>Exam Date : </h6> <p>{getBooked?.exam_date}</p>
+									</div>
+								) : (
+									<input
+										type="date"
+										placeholder="Exam date . . ."
+										required
+										// onChange={(e) => setExamD(e.target.value)}
+										// value={examD}
+									/>
+								)}
+							</div>
+
+							<div className="exam-fields">
+								<div className="input-field">
+									{!editT && getBooked ? (
+										<div className="displaying">
+											<h6>Exam User : </h6> <p>{getBooked?.exam_user}</p>
+										</div>
+									) : (
+										<input
+											type="text"
+											placeholder="Exam user . . ."
+											required
+											// onChange={(e) => setExamU(e.target.value)}
+											// value={examU}
+										/>
+									)}
+								</div>
+
+								<div className="input-field">
+									{!editT && getBooked ? (
+										<div className="displaying">
+											<h6>Exam Password : </h6>{" "}
+											<p>{getBooked?.exam_password}</p>
+										</div>
+									) : (
+										<input
+											type="password"
+											placeholder="Exam password . . ."
+											required
+											// onChange={(e) => setExamP(e.target.value)}
+											// value={examP}
+										/>
+									)}
+								</div>
+							</div>
+
 							{(!getBooked || editT) && (
 								<div className="upload" id={getPreview ? "preview" : ""}>
 									{getPreview ? (
